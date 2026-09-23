@@ -1,0 +1,64 @@
+/* Shared production styles, including the signature footer. */
+body.cyber-grid-bg { background-color: #08090f; background-image: none; }
+.brand-wordmark { font-size: clamp(14px, 1.4vw, 20px); }
+body :is(a,button,input,textarea,select):focus-visible { outline: 2px solid #b7a1df !important; outline-offset: 5px; }
+.reveal-on-scroll { opacity: 1; transform: none; }
+#site-footer.signature-footer { position: relative; isolation: isolate; overflow: hidden; padding: 48px 6vw 0; background: #08090f; border-top: 1px solid #ffffff0b; }
+/* Continue the homepage's existing wave layer instead of starting a second one. */
+body:has(> .ambient-scene) #site-footer.signature-footer { background: transparent; border-top: 0; z-index: 1; }
+body:has(> .ambient-scene) #site-footer > .footer-waves { display: none; }
+.signature-inner { position: relative; max-width: 1400px; margin: 0 auto; }
+.signature-eyebrow { margin: 0 0 46px; color: #9691a5; font: 600 10px/1.7 ui-monospace, monospace; letter-spacing: .24em; }
+.signature-name { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: clamp(40px, 12.6vw, 186px); font-weight: 700; letter-spacing: -.075em; line-height: 1.06; }
+.signature-name > span { display: block; width: fit-content; background: linear-gradient(110deg, #fbfaff 3%, #e8deff 40%, #c9b9fb 76%, #afbff1); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.signature-name > span + span { margin-top: 14px; }
+.signature-name .signature-period { color: #ac91e3; }
+.signature-bottom { margin-top: 40px; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; border-top: 1px solid #ffffff12; color: #a49cb1; font-size: 11px; }
+.signature-bottom nav { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.signature-bottom a { display: inline-block; padding: 10px 0; transition: color .2s; }
+.signature-bottom a:hover { color: #eee4ff; }
+.footer-waves { position: absolute; inset: auto -8% 12%; width: 116%; height: 62%; z-index: -1; pointer-events: none; overflow: visible; }
+.footer-waves path { fill: none; stroke: #9780c9; stroke-opacity: .28; stroke-width: 1.15; vector-effect: non-scaling-stroke; }
+.footer-waves { animation: signature-wave 10s ease-in-out infinite alternate; }
+@keyframes signature-wave { to { transform: translateY(-35px) scaleY(.78); } }
+@media (max-width: 640px) {
+  #site-footer.signature-footer { padding: 34px 5vw 0; }
+  .signature-eyebrow { font-size: 8px; letter-spacing: .12em; margin-bottom: 26px; }
+  .signature-name { font-size: 12.8vw; }
+  .signature-bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .signature-bottom nav { gap: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ── Contact Form: Custom Validation Styles ── */
+.cf-error {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: #f87171;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .2s ease, transform .2s ease, height .2s ease;
+  pointer-events: none;
+}
+.cf-error::before {
+  content: '⚠ ';
+  color: #a78bfa;
+}
+.cf-error--visible {
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 6px;
+  pointer-events: auto;
+}
+.cf-input--error {
+  border-color: rgba(167, 139, 250, 0.6) !important;
+  box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.35), inset 0 0 14px rgba(167, 139, 250, 0.04);
+}

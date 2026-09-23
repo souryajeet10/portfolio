@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>All Projects | Souryajeet - Developer Portfolio</title>
+<meta name="description" content="All Projects | Souryajeet - Developer Portfolio — Explore the project, its features and the technologies behind it."/>
+<meta name="theme-color" content="#08090f"/>
+  <!-- Tailwind CSS CDN with plugins -->
+  <link rel="stylesheet" href="./assets/tailwind.css"/>
+  <!-- Tailwind Custom Configuration -->
+  
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Styles identical to homepage -->
+  <style>
+    body {
+      background-color: #07090E;
+      color: #F8FAFC;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .cyber-grid-bg {
+      background-color: #07090E;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-panel:hover {
+      border-color: rgba(139, 92, 246, 0.35);
+    }
+    @keyframes floatOrb {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-20px) scale(1.05); }
+    }
+    .animate-float-slow {
+      animation: floatOrb 8s ease-in-out infinite;
+    }
+    .animate-float-delayed {
+      animation: floatOrb 10s ease-in-out infinite 3s;
+    }
+  
+    /* Heroic SOURYAJEET SINGH: Clean Hover to White (No Glow) */
+  .heroic-name-container {
+    cursor: pointer;
+  }
+  .heroic-name-word-1 {
+    background-image: linear-gradient(90deg, #A78BFA, #C4B5FD, #38BDF8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: -webkit-text-fill-color 250ms ease, color 250ms ease;
+  }
+  .heroic-name-word-2 {
+    background-image: linear-gradient(90deg, #38BDF8, #C4B5FD, #A78BFA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: -webkit-text-fill-color 250ms ease, color 250ms ease;
+  }
+  .heroic-name-container:hover .heroic-name-word-1,
+  .heroic-name-word-1:hover,
+  .heroic-name-container:hover .heroic-name-word-2,
+  .heroic-name-word-2:hover {
+    -webkit-text-fill-color: #E2E8F0;
+    color: #E2E8F0;
+    filter: none;
+  }
+
+</style>
+<link rel="stylesheet" href="./assets/site.css"/>
+<script defer src="./js/site.js"></script>
+</head>
+<body class="cyber-grid-bg text-slate-200 antialiased font-sans selection:bg-neonPurple/30 selection:text-neonCyan min-h-screen relative overflow-x-hidden flex flex-col justify-between">
+
+  <!-- Ambient Cyber Lighting Blobs -->
+  <div class="fixed top-12 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none -z-10 animate-float-slow"></div>
+  <div class="fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-float-delayed"></div>
+  <div class="fixed bottom-20 left-10 w-80 h-80 bg-violet-700/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- BEGIN: NavigationBar (Exact Homepage Component with Projects Active) -->
+  <header id="main-header" class="fixed top-0 inset-x-0 z-50 w-full backdrop-blur-md bg-cyberDark/85 border-b border-white/[0.08] transition-all duration-300 ease-in-out transform translate-y-0 opacity-100" data-purpose="site-navigation-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a class="flex items-center group text-lg sm:text-2xl font-bold tracking-tight text-white focus:outline-none" href="./index.html">
+        <span class="brand-wordmark text-white group-hover:text-slate-100 transition-colors">Souryajeet Singh</span>
+      </a>
+      
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation" class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300" id="desktop-nav">
+        <a class="nav-link hover:text-neonCyan transition-colors duration-200" href="./index.html">Home</a>
+        <a class="nav-link hover:text-neonCyan transition-colors duration-200" href="./index.html#skills">Skills</a>
+        <!-- ACTIVE Projects Nav Link -->
+        <a class="nav-link relative py-1 text-white font-semibold after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-neonViolet after:to-neonCyan after:shadow-[0_0_8px_rgba(56,189,248,0.8)]" href="./projects.html">Projects</a>
+        <a class="nav-link hover:text-neonCyan transition-colors duration-200" href="./index.html#experience">Experience</a>
+        <a class="nav-link hover:text-neonCyan transition-colors duration-200" href="./index.html#about">About</a>
+        <a class="nav-link hover:text-neonCyan transition-colors duration-200" href="./index.html#contact">Contact</a>
+      </nav>
+      
+      <!-- Right Action CTA & Mobile Toggle Container -->
+      <div class="flex items-center gap-2.5 sm:gap-4">
+        <a class="hidden sm:inline-flex relative items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-xl group bg-gradient-to-br from-neonViolet via-purple-500 to-neonCyan group-hover:from-neonViolet group-hover:to-neonCyan hover:shadow-dual-glow transition-all duration-300" href="./index.html#contact">
+          <span class="relative px-4 sm:px-5 py-1.5 sm:py-2 transition-all ease-in duration-200 bg-cyberDark rounded-[10px] text-white font-semibold group-hover:bg-opacity-0 flex items-center gap-2 text-xs sm:text-sm">
+            Let's Talk
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-neonCyan group-hover:translate-x-0.5 group-hover:text-white transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button id="mobile-menu-toggle" aria-label="Toggle navigation menu" class="md:hidden p-2 rounded-xl glass-panel text-slate-300 hover:text-white hover:border-neonCyan/50 focus:outline-none transition-colors">
+          <svg id="hamburger-icon" class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-5 h-5 sm:w-6 sm:h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-5 border-t border-white/[0.06] bg-cyberDark/95 backdrop-blur-xl transition-all duration-300">
+      <div class="flex flex-col space-y-1.5 font-medium text-sm text-slate-300 pt-2">
+        <a class="mobile-nav-link px-3.5 py-2.5 rounded-lg hover:text-neonCyan hover:bg-white/[0.02] transition flex items-center justify-between" href="./index.html">
+          <span>Home</span>
+        </a>
+        <a class="mobile-nav-link px-3.5 py-2.5 rounded-lg hover:text-neonCyan hover:bg-white/[0.02] transition flex items-center justify-between" href="./index.html#skills">
+          <span>Skills</span>
+        </a>
+        <!-- ACTIVE Projects Mobile Nav Link -->
+        <a class="mobile-nav-link px-3.5 py-2.5 rounded-lg text-white font-semibold bg-white/[0.04] border border-neonCyan/20 flex items-center justify-between" href="./projects.html">
+          <span>Projects</span>
+        </a>
+        <a class="mobile-nav-link px-3.5 py-2.5 rounded-lg hover:text-neonCyan hover:bg-white/[0.02] transition flex items-center justify-between" href="./index.html#experience">
+          <span>Experience</span>
+        </a>
+        <a class="mobile-nav-link px-3.5 py-2.5 rounded-lg hover:text-neonCyan hover:bg-white/[0.02] transition flex items-center justify-between" href="./index.html#about">
+          <span>About</span>
+        </a>
+        <a class="mobile-nav-link px-3.5 py-2.5 rounded-lg hover:text-neonCyan hover:bg-white/[0.02] transition flex items-center justify-between" href="./index.html#contact">
+          <span>Contact</span>
+        </a>
+        <!-- Mobile CTA Button -->
+        <div class="pt-2">
+          <a class="mobile-nav-link w-full py-2.5 px-4 rounded-xl font-semibold text-white bg-gradient-to-r from-neonViolet to-neonCyan flex items-center justify-center gap-2 shadow-dual-glow text-sm" href="./index.html#contact">
+            <span>Let's Talk</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- END: NavigationBar -->
+
+  <!-- Projects Page Content -->
+  <main class="pt-28 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex-1">
+    <!-- Ambient glow -->
+    <div class="absolute top-12 left-1/4 w-96 h-96 bg-neonViolet/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute top-1/3 right-10 w-96 h-96 bg-neonCyan/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Back to Portfolio breadcrumb -->
+      <div class="mb-8">
+        <a href="./index.html#projects" class="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-neonCyan transition">
+          <span>←</span>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-14 sm:mb-18">
+        <!-- Eyebrow: MY WORK -->
+        <div class="flex items-center gap-2.5 mb-3">
+          <div class="h-[1.5px] w-6 bg-neonViolet"></div>
+          <span class="text-xs sm:text-sm font-mono font-semibold tracking-[0.25em] text-neonViolet uppercase">
+            MY WORK
+          </span>
+        </div>
+
+        <!-- Heading: All Projects -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white font-sans mb-4">
+          All Projects
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+          A collection of things I've built while learning, experimenting, and exploring web development.
+        </p>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+      <!-- Project Card: 01 Appointment System -->
+      <article class="group rounded-2xl p-6 sm:p-7 bg-[#0B0F19]/90 border border-white/[0.08] hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between hover:shadow-[0_12px_35px_rgba(0,0,0,0.45)] relative overflow-hidden">
+        <div>
+          <!-- Number & Top Header -->
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-white/[0.04] border border-white/[0.08] text-neonCyan">01</span>
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Full-Stack Web Application</span>
+            </div>
+            <a href="./projects/appointment-system.html" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1 group/det transition-colors">
+              <span>Case Study</span>
+              <span class="text-neonCyan transform group-hover/det:translate-x-0.5 transition-transform">↗</span>
+            </a>
+          </div>
+
+          <!-- Large Visual Area with Automatic Placeholder Fallback -->
+          <a href="./projects/appointment-system.html" class="block rounded-xl overflow-hidden mb-6 aspect-[16/10] bg-gradient-to-br from-[#121828] via-[#0d1220] to-[#090d16] border border-white/[0.06] relative group/img cursor-pointer transition-all hover:border-cyan-500/40">
+            
+            <div class="w-full h-full flex flex-col items-center justify-center p-6 text-center select-none">
+              <svg class="w-12 h-12 text-slate-500 mb-3 transition-transform group-hover/img:scale-105" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span class="text-xs font-mono font-bold tracking-[0.2em] text-slate-300 uppercase">PROJECT PREVIEW</span>
+              <span class="text-[10px] font-mono text-slate-500 tracking-[0.25em] uppercase mt-1">COMING SOON</span>
+            </div>
+          </a>
+
+          <!-- Project Title -->
+          <a href="./projects/appointment-system.html" class="block group/title">
+            <h2 class="text-2xl font-bold text-white mb-2.5 group-hover/title:text-neonCyan transition-colors">
+              Appointment System
+            </h2>
+          </a>
+
+          <!-- Description -->
+          <p class="text-sm text-slate-300 leading-relaxed mb-5 min-h-[44px]">
+            A full-stack appointment booking platform designed to make scheduling simple for users and administrators.
+          </p>
+
+          <!-- Technology Pills (Directly below description, NO scope/tabs) -->
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">React</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Node.js</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">MongoDB</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">WebSockets</span>
+          </div>
+
+          <!-- Key Features -->
+          <div class="mb-6 space-y-2">
+            <span class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features</span>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+              
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Appointment booking</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Real-time availability</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Admin dashboard</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>User management</span>
+            </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card Actions: Details, GitHub, View Demo -->
+        <div class="pt-5 border-t border-white/[0.06] flex flex-wrap items-center gap-2.5">
+          <a href="./projects/appointment-system.html" class="flex-1 min-w-[90px] py-2.5 px-3 rounded-xl text-xs font-mono font-semibold text-white bg-white/[0.05] hover:bg-white/[0.09] border border-white/10 hover:border-white/25 transition text-center flex items-center justify-center gap-1">
+            <span>Details</span>
+            <span class="text-neonCyan">↗</span>
+          </a>
+          <button disabled class="flex-1 min-w-[100px] py-2.5 px-3 rounded-xl text-xs font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed flex items-center justify-center gap-1.5 opacity-60" title="Private Repository">
+          <span>Private Repo</span>
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </button>
+          <button disabled class="flex-1 min-w-[100px] py-2.5 px-3 rounded-xl text-xs font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed flex items-center justify-center gap-1.5 opacity-60" title="Live Demo Coming Soon">
+          <span>Demo Coming Soon</span>
+        </button>
+        </div>
+      </article>
+
+      <!-- Project Card: 02 CampusLive -->
+      <article class="group rounded-2xl p-6 sm:p-7 bg-[#0B0F19]/90 border border-white/[0.08] hover:border-violet-500/40 transition-all duration-300 flex flex-col justify-between hover:shadow-[0_12px_35px_rgba(0,0,0,0.45)] relative overflow-hidden">
+        <div>
+          <!-- Number & Top Header -->
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-white/[0.04] border border-white/[0.08] text-purple-300">02</span>
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Interactive Discovery Platform</span>
+            </div>
+            <a href="./projects/campuslive.html" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1 group/det transition-colors">
+              <span>Case Study</span>
+              <span class="text-purple-300 transform group-hover/det:translate-x-0.5 transition-transform">↗</span>
+            </a>
+          </div>
+
+          <!-- Large Visual Area with Automatic Placeholder Fallback -->
+          <a href="./projects/campuslive.html" class="block rounded-xl overflow-hidden mb-6 aspect-[16/10] bg-gradient-to-br from-[#121828] via-[#0d1220] to-[#090d16] border border-white/[0.06] relative group/img cursor-pointer transition-all hover:border-violet-500/40">
+            
+            <div class="w-full h-full flex flex-col items-center justify-center p-6 text-center select-none">
+              <svg class="w-12 h-12 text-slate-500 mb-3 transition-transform group-hover/img:scale-105" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span class="text-xs font-mono font-bold tracking-[0.2em] text-slate-300 uppercase">PROJECT PREVIEW</span>
+              <span class="text-[10px] font-mono text-slate-500 tracking-[0.25em] uppercase mt-1">COMING SOON</span>
+            </div>
+          </a>
+
+          <!-- Project Title -->
+          <a href="./projects/campuslive.html" class="block group/title">
+            <h2 class="text-2xl font-bold text-white mb-2.5 group-hover/title:text-purple-300 transition-colors">
+              CampusLive
+            </h2>
+          </a>
+
+          <!-- Description -->
+          <p class="text-sm text-slate-300 leading-relaxed mb-5 min-h-[44px]">
+            A campus activity discovery platform that helps students discover what's happening around them through an interactive live campus map.
+          </p>
+
+          <!-- Technology Pills (Directly below description, NO scope/tabs) -->
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">React</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Firebase</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">JavaScript</span>
+          </div>
+
+          <!-- Key Features -->
+          <div class="mb-6 space-y-2">
+            <span class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features</span>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+              
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Live campus map</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Activity pins</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Activity discovery</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Event information</span>
+            </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card Actions: Details, GitHub, View Demo -->
+        <div class="pt-5 border-t border-white/[0.06] flex flex-wrap items-center gap-2.5">
+          <a href="./projects/campuslive.html" class="flex-1 min-w-[90px] py-2.5 px-3 rounded-xl text-xs font-mono font-semibold text-white bg-white/[0.05] hover:bg-white/[0.09] border border-white/10 hover:border-white/25 transition text-center flex items-center justify-center gap-1">
+            <span>Details</span>
+            <span class="text-purple-300">↗</span>
+          </a>
+          <button disabled class="flex-1 min-w-[100px] py-2.5 px-3 rounded-xl text-xs font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed flex items-center justify-center gap-1.5 opacity-60" title="Private Repository">
+          <span>Private Repo</span>
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </button>
+          <button disabled class="flex-1 min-w-[100px] py-2.5 px-3 rounded-xl text-xs font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed flex items-center justify-center gap-1.5 opacity-60" title="Live Demo Coming Soon">
+          <span>Demo Coming Soon</span>
+        </button>
+        </div>
+      </article>
+
+      <!-- Project Card: 03 KrishiLink -->
+      <article class="group rounded-2xl p-6 sm:p-7 bg-[#0B0F19]/90 border border-white/[0.08] hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between hover:shadow-[0_12px_35px_rgba(0,0,0,0.45)] relative overflow-hidden">
+        <div>
+          <!-- Number & Top Header -->
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-white/[0.04] border border-white/[0.08] text-neonCyan">03</span>
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Agricultural Intelligence Layer</span>
+            </div>
+            <a href="./projects/krishilink.html" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1 group/det transition-colors">
+              <span>Case Study</span>
+              <span class="text-neonCyan transform group-hover/det:translate-x-0.5 transition-transform">↗</span>
+            </a>
+          </div>
+
+          <!-- Large Visual Area with Automatic Placeholder Fallback -->
+          <a href="./projects/krishilink.html" class="block rounded-xl overflow-hidden mb-6 aspect-[16/10] bg-gradient-to-br from-[#121828] via-[#0d1220] to-[#090d16] border border-white/[0.06] relative group/img cursor-pointer transition-all hover:border-cyan-500/40">
+            
+            <div class="w-full h-full flex flex-col items-center justify-center p-6 text-center select-none">
+              <svg class="w-12 h-12 text-slate-500 mb-3 transition-transform group-hover/img:scale-105" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span class="text-xs font-mono font-bold tracking-[0.2em] text-slate-300 uppercase">PROJECT PREVIEW</span>
+              <span class="text-[10px] font-mono text-slate-500 tracking-[0.25em] uppercase mt-1">COMING SOON</span>
+            </div>
+          </a>
+
+          <!-- Project Title -->
+          <a href="./projects/krishilink.html" class="block group/title">
+            <h2 class="text-2xl font-bold text-white mb-2.5 group-hover/title:text-neonCyan transition-colors">
+              KrishiLink
+            </h2>
+          </a>
+
+          <!-- Description -->
+          <p class="text-sm text-slate-300 leading-relaxed mb-5 min-h-[44px]">
+            An AI-powered decision layer designed to help farmers decide where, when, and to whom to sell their produce.
+          </p>
+
+          <!-- Technology Pills (Directly below description, NO scope/tabs) -->
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Flutter</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">REST APIs</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">AI</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">e-NAM</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Agmarknet</span>
+          </div>
+
+          <!-- Key Features -->
+          <div class="mb-6 space-y-2">
+            <span class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features</span>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+              
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Market data</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Price analysis</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Buyer discovery</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Multilingual interface</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Voice-first interaction</span>
+            </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card Actions: Details, GitHub, View Demo -->
+        <div class="pt-5 border-t border-white/[0.06] flex flex-wrap items-center gap-2.5">
+          <a href="./projects/krishilink.html" class="flex-1 min-w-[90px] py-2.5 px-3 rounded-xl text-xs font-mono font-semibold text-white bg-white/[0.05] hover:bg-white/[0.09] border border-white/10 hover:border-white/25 transition text-center flex items-center justify-center gap-1">
+            <span>Details</span>
+            <span class="text-neonCyan">↗</span>
+          </a>
+          <button disabled class="flex-1 min-w-[100px] py-2.5 px-3 rounded-xl text-xs font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed flex items-center justify-center gap-1.5 opacity-60" title="Private Repository">
+          <span>Private Repo</span>
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </button>
+          <button disabled class="flex-1 min-w-[100px] py-2.5 px-3 rounded-xl text-xs font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed flex items-center justify-center gap-1.5 opacity-60" title="Live Demo Coming Soon">
+          <span>Demo Coming Soon</span>
+        </button>
+        </div>
+      </article>
+
+      <!-- Project Card: 04 Student Dashboard -->
+      <article class="group rounded-2xl p-6 sm:p-7 bg-[#0B0F19]/90 border border-white/[0.08] hover:border-violet-500/40 transition-all duration-300 flex flex-col justify-between hover:shadow-[0_12px_35px_rgba(0,0,0,0.45)] relative overflow-hidden">
+        <div>
+          <!-- Number & Top Header -->
+          <div class="flex items-center justify-between gap-3 mb-4">
+            <div class="flex items-center gap-2.5">
+              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded bg-white/[0.04] border border-white/[0.08] text-purple-300">04</span>
+              <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Academic Productivity Suite</span>
+            </div>
+            <a href="./projects/student-dashboard.html" class="text-xs font-mono text-slate-400 hover:text-white flex items-center gap-1 group/det transition-colors">
+              <span>Case Study</span>
+              <span class="text-purple-300 transform group-hover/det:translate-x-0.5 transition-transform">↗</span>
+            </a>
+          </div>
+
+          <!-- Large Visual Area with Automatic Placeholder Fallback -->
+          <a href="./projects/student-dashboard.html" class="block rounded-xl overflow-hidden mb-6 aspect-[16/10] bg-gradient-to-br from-[#121828] via-[#0d1220] to-[#090d16] border border-white/[0.06] relative group/img cursor-pointer transition-all hover:border-violet-500/40">
+            
+            <div class="w-full h-full flex flex-col items-center justify-center p-6 text-center select-none">
+              <svg class="w-12 h-12 text-slate-500 mb-3 transition-transform group-hover/img:scale-105" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span class="text-xs font-mono font-bold tracking-[0.2em] text-slate-300 uppercase">PROJECT PREVIEW</span>
+              <span class="text-[10px] font-mono text-slate-500 tracking-[0.25em] uppercase mt-1">COMING SOON</span>
+            </div>
+          </a>
+
+          <!-- Project Title -->
+          <a href="./projects/student-dashboard.html" class="block group/title">
+            <h2 class="text-2xl font-bold text-white mb-2.5 group-hover/title:text-purple-300 transition-colors">
+              Student Dashboard
+            </h2>
+          </a>
+
+          <!-- Description -->
+          <p class="text-sm text-slate-300 leading-relaxed mb-5 min-h-[44px]">
+            A productivity dashboard designed around the everyday workflow of students to manage tasks, deadlines, study goals, and academic progress in one place.
+          </p>
+
+          <!-- Technology Pills (Directly below description, NO scope/tabs) -->
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">React</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">JavaScript</span>
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Firebase</span>
+          </div>
+
+          <!-- Key Features -->
+          <div class="mb-6 space-y-2">
+            <span class="text-xs font-mono font-semibold text-slate-400 uppercase tracking-wider block mb-2">Key Features</span>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+              
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Task management</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Deadline tracking</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Study goals</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span>Progress overview</span>
+            </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card Actions: Details, GitHub, View Demo -->
+        <div class="pt-5 border-t border-white/[0.06] flex flex-wrap items-center gap-2.5">
+          <a href="./projects/student-dashboard.html" class="flex-1 min-w-[90px] py-2.5 px-3 rounded-xl text-xs font-mono font-semibold text-white bg-white/[0.05] hover:bg-white/[0.09] border border-white/10 hover:border-white/25 transition text-center flex items-center justify-center gap-1">
+            <span>Details</span>
+            <span class="text-purple-300">↗</span>
+          </a>
+          <button disabled class="flex-1 min-w-[100px] py-2.5 px-3 rounded-xl text-xs font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed flex items-center justify-center gap-1.5 opacity-60" title="Private Repository">
+          <span>Private Repo</span>
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </button>
+          <button disabled class="flex-1 min-w-[100px] py-2.5 px-3 rounded-xl text-xs font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed flex items-center justify-center gap-1.5 opacity-60" title="Live Demo Coming Soon">
+          <span>Demo Coming Soon</span>
+        </button>
+        </div>
+      </article>
+      </div>
+
+      <!-- Bottom CTA: Have an idea worth building? -->
+      <div class="mt-24 sm:mt-28 py-14 px-6 sm:px-12 rounded-3xl bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.08] text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.08)_0%,transparent_70%)] pointer-events-none"></div>
+        <div class="relative z-10 max-w-xl mx-auto space-y-4">
+          <span class="text-xs font-mono uppercase tracking-[0.25em] text-neonCyan block">COLLABORATION</span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-white font-sans">Have an idea worth building?</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">I'm always open to discussing new projects, web applications, and collaborative ideas.</p>
+          <div class="pt-2">
+            <a href="./index.html#contact" class="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-mono text-sm font-semibold text-white bg-gradient-to-r from-neonViolet to-neonCyan hover:opacity-90 shadow-[0_0_25px_rgba(139,92,246,0.35)] transition-all group">
+              <span>Let's Talk</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- BEGIN: Footer (Exact Homepage Component) -->
+  <footer id="site-footer" class="signature-footer">
+  <svg class="footer-waves" viewBox="0 0 1400 500" preserveAspectRatio="none" aria-hidden="true"><path transform="translate(0 0)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 17)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 34)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 51)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 68)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 85)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 102)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 119)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/></svg>
+  <div class="signature-inner">
+    <p class="signature-eyebrow">STUDENT / PROGRAMMER / DEVELOPER / CREATOR</p>
+    <p class="signature-name" aria-label="Souryajeet Singh"><span aria-hidden="true">SOURYAJEET</span><span aria-hidden="true">SINGH<span class="signature-period">.</span></span></p>
+    <div class="signature-bottom"><p>© <span data-footer-year>2026</span> Souryajeet Singh</p>
+      <nav aria-label="Footer links"><a href="https://github.com/souryajeet10/" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/souryajeet10/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:souryajeet2006@gmail.com">Email ↗</a><a href="./index.html#hero">Back to top ↑</a></nav>
+    </div>
+  </div>
+</footer>
+  <!-- END: Footer -->
+
+  <!-- Shared Component Scripts & Project Data -->
+  <script src="./js/projects-data.js"></script>
+  <script src="./js/components.js"></script>
+</body>
+</html>

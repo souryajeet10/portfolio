@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>CampusLive — Project Case Study | Souryajeet</title>
+<meta name="description" content="CampusLive — Project Case Study | Souryajeet — Explore the project, its features and the technologies behind it."/>
+<meta name="theme-color" content="#08090f"/>
+  <!-- Tailwind CSS CDN with plugins -->
+  <link rel="stylesheet" href="../../assets/tailwind.css"/>
+  
+  <style>
+    .cyber-grid-bg {
+      background-color: #07090E;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-panel:hover {
+      border-color: rgba(139, 92, 246, 0.35);
+    }
+  </style>
+<link rel="stylesheet" href="../../assets/site.css"/>
+<script defer src="../../js/site.js"></script>
+</head>
+<body class="cyber-grid-bg text-slate-200 antialiased font-sans min-h-screen relative overflow-x-hidden selection:bg-neonPurple/30 selection:text-neonCyan">
+
+  <!-- Ambient Lighting Elements -->
+  <div class="fixed top-12 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- Main Navigation Bar -->
+  <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-cyberDark/80 border-b border-white/[0.08]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a class="flex items-center group text-2xl font-bold tracking-tight text-white focus:outline-none" href="../../index.html">
+        <span class="brand-wordmark text-white group-hover:text-slate-100 transition-colors">Souryajeet Singh</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a class="hover:text-neonCyan transition-colors duration-200" href="../../index.html#hero">Home</a>
+        <a class="hover:text-neonCyan transition-colors duration-200" href="../../index.html#skills">Skills</a>
+        <a class="text-white font-semibold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-neonViolet after:to-neonCyan after:shadow-[0_0_8px_rgba(56,189,248,0.8)]" href="../../index.html#projects">Projects</a>
+        <a class="hover:text-neonCyan transition-colors duration-200" href="../../index.html#experience">Experience</a>
+        <a class="hover:text-neonCyan transition-colors duration-200" href="../../index.html#about">About</a>
+        <a class="hover:text-neonCyan transition-colors duration-200" href="../../index.html#contact">Contact</a>
+      </nav>
+
+      <!-- Right Action CTA -->
+      <div class="flex items-center gap-4">
+        <a class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium rounded-xl group bg-gradient-to-br from-neonViolet via-purple-500 to-neonCyan hover:shadow-dual-glow transition-all duration-300" href="../../index.html#contact">
+          <span class="relative px-5 py-2 transition-all ease-in duration-200 bg-cyberDark rounded-[10px] text-white font-semibold group-hover:bg-opacity-0 flex items-center gap-2">
+            Let's Talk
+            <svg class="w-4 h-4 text-neonCyan group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <!-- Breadcrumb / Back Link -->
+    <div class="mb-10 sm:mb-12">
+      <a href="../../index.html#projects" class="inline-flex items-center gap-2.5 text-xs sm:text-sm font-mono text-slate-400 hover:text-neonCyan transition-colors group">
+        <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        <span>Back to Projects</span>
+      </a>
+    </div>
+
+    <!-- Case Study Hero Header -->
+    <div class="space-y-6 mb-12 sm:mb-16">
+      <div class="flex items-center gap-3">
+        <span class="text-xs sm:text-sm font-mono font-bold px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-neonViolet">
+          PROJECT 02
+        </span>
+        <span class="text-xs font-mono text-slate-500 uppercase tracking-widest">• Interactive Discovery Platform</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+        CampusLive
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-3xl font-normal">
+        A campus activity discovery platform that helps students discover what's happening around them through an interactive live campus map.
+      </p>
+
+      <!-- Meta Action Buttons -->
+      <div class="flex flex-wrap items-center gap-3 pt-2">
+        <button disabled class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed opacity-60">
+          <span>Private Repo</span>
+          <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </button>
+        <button disabled class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-mono font-medium text-slate-500 bg-white/[0.02] border border-white/[0.05] cursor-not-allowed opacity-60">
+          <span>Demo Coming Soon</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Large Showcase Hero Image / Interface Area -->
+    <div class="mb-16 sm:mb-20 rounded-2xl overflow-hidden border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.5)] bg-[#0A0D14]">
+      
+      <div class="w-full h-full min-h-[300px] sm:min-h-[340px] bg-[#0A0D15] rounded-xl p-5 flex flex-col justify-between border border-white/[0.08] relative overflow-hidden font-sans select-none">
+        <div class="flex items-center justify-between pb-3 border-b border-white/[0.06]">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-violet-400 animate-ping"></span>
+            <span class="text-xs font-mono text-white font-semibold">Campus Live Activity Radar</span>
+          </div>
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-violet-500/20 text-violet-300 border border-violet-500/30">14 Live Pins</span>
+        </div>
+
+        <!-- Simulated Vector Campus Map -->
+        <div class="my-4 relative h-40 rounded-lg bg-[#070A11] border border-white/[0.05] overflow-hidden">
+          <!-- Grid Lines -->
+          <div class="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          
+          <!-- Buildings -->
+          <div class="absolute top-4 left-6 w-24 h-14 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-[10px] font-mono text-slate-500">Tech Block</div>
+          <div class="absolute bottom-4 right-8 w-28 h-16 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-[10px] font-mono text-slate-500">Auditorium</div>
+          <div class="absolute top-6 right-16 w-20 h-12 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-[10px] font-mono text-slate-500">Library</div>
+
+          <!-- Pulsing Map Pins -->
+          <div class="absolute top-10 left-24 flex items-center gap-1.5 cursor-pointer">
+            <span class="w-3.5 h-3.5 rounded-full bg-neonCyan border-2 border-white shadow-[0_0_12px_#38BDF8] flex items-center justify-center"></span>
+            <span class="px-2 py-0.5 rounded bg-cyberDark/90 text-neonCyan text-[10px] font-mono border border-neonCyan/40 shadow-lg">Hackathon Hub (68)</span>
+          </div>
+
+          <div class="absolute bottom-10 right-20 flex items-center gap-1.5 cursor-pointer">
+            <span class="w-3.5 h-3.5 rounded-full bg-neonViolet border-2 border-white shadow-[0_0_12px_#8B5CF6]"></span>
+            <span class="px-2 py-0.5 rounded bg-cyberDark/90 text-violet-300 text-[10px] font-mono border border-neonViolet/40 shadow-lg">Robotics Meet</span>
+          </div>
+        </div>
+
+        <!-- Active Brief Strip -->
+        <div class="p-3 rounded-lg bg-[#111728] border border-white/[0.07] flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2.5">
+            <span class="text-base">🚀</span>
+            <div>
+              <div class="font-bold text-white">48-Hr Web Sprint · Lab 304</div>
+              <div class="text-[11px] text-slate-400 font-mono">Started 25m ago · Open to all CSE batches</div>
+            </div>
+          </div>
+          <span class="px-2.5 py-1 rounded bg-violet-600/30 text-white font-mono text-[11px] border border-violet-500/40">View Pin ↗</span>
+        </div>
+      </div>
+    
+    </div>
+
+    <!-- Case Study Sections Stack -->
+    <div class="space-y-16 sm:space-y-20">
+
+      <!-- 01 — OVERVIEW -->
+      <section class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase">01 — OVERVIEW</span>
+          <div class="h-[1px] flex-1 bg-white/[0.08]"></div>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Project Context &amp; Objectives
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2.5">
+            <h3 class="text-xs font-mono font-semibold uppercase text-violet-300">What It Is</h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-normal">A real-time geospatial discovery platform where students can see what clubs, workshops, or study groups are meeting right now across university grounds.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2.5">
+            <h3 class="text-xs font-mono font-semibold uppercase text-cyan-300">Problem Addressed</h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-normal">Campus announcements were scattered across multiple unofficial social channels, causing students to miss relevant workshops, tech talks, and cultural events.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2.5">
+            <h3 class="text-xs font-mono font-semibold uppercase text-emerald-300">What I Built</h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-normal">Created an interactive web map with Firebase Realtime Database integration allowing student organizers to drop activity pins and attendees to discover them instantaneously.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 — KEY FEATURES -->
+      <section class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase">02 — KEY FEATURES</span>
+          <div class="h-[1px] flex-1 bg-white/[0.08]"></div>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Core Capabilities
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
+          
+            <div class="p-6 rounded-2xl bg-[#0c101a]/70 border border-white/[0.07] hover:border-white/15 transition-all space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neonViolet"></span>
+                <h3 class="text-base font-bold text-white">Live Campus Map</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed font-normal pl-3.5">Interactive map visualization pinning real-time workshops, club meetups, and hackathons across campus venues.</p>
+            </div>
+          
+            <div class="p-6 rounded-2xl bg-[#0c101a]/70 border border-white/[0.07] hover:border-white/15 transition-all space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neonViolet"></span>
+                <h3 class="text-base font-bold text-white">Activity Pins</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed font-normal pl-3.5">Color-coded geospatial map markers reflecting activity categories, crowd interest, and ongoing timelines.</p>
+            </div>
+          
+            <div class="p-6 rounded-2xl bg-[#0c101a]/70 border border-white/[0.07] hover:border-white/15 transition-all space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neonViolet"></span>
+                <h3 class="text-base font-bold text-white">Activity Discovery</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed font-normal pl-3.5">Filterable feed allowing students to discover happenings by category, academic department, or time.</p>
+            </div>
+          
+            <div class="p-6 rounded-2xl bg-[#0c101a]/70 border border-white/[0.07] hover:border-white/15 transition-all space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neonViolet"></span>
+                <h3 class="text-base font-bold text-white">Event Information</h3>
+              </div>
+              <p class="text-sm text-slate-400 leading-relaxed font-normal pl-3.5">Detailed modal views providing venue directions, agenda outlines, organizer contacts, and RSVP counters.</p>
+            </div>
+          
+        </div>
+      </section>
+
+      <!-- 03 — TECH STACK -->
+      <section class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase">03 — TECH STACK</span>
+          <div class="h-[1px] flex-1 bg-white/[0.08]"></div>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Technologies &amp; Architecture Role
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
+          
+            <div class="p-5 rounded-xl bg-white/[0.02] border border-white/[0.06] hover:border-violet-500/30 transition-all">
+              <span class="text-sm font-bold text-white font-mono block mb-1">React</span>
+              <span class="text-xs text-slate-400 leading-relaxed font-normal block">Dynamic Map UI & Filter System</span>
+            </div>
+          
+            <div class="p-5 rounded-xl bg-white/[0.02] border border-white/[0.06] hover:border-violet-500/30 transition-all">
+              <span class="text-sm font-bold text-white font-mono block mb-1">Firebase</span>
+              <span class="text-xs text-slate-400 leading-relaxed font-normal block">Realtime Database & Authentication</span>
+            </div>
+          
+            <div class="p-5 rounded-xl bg-white/[0.02] border border-white/[0.06] hover:border-violet-500/30 transition-all">
+              <span class="text-sm font-bold text-white font-mono block mb-1">JavaScript</span>
+              <span class="text-xs text-slate-400 leading-relaxed font-normal block">Interactive Map Geometry & State</span>
+            </div>
+          
+        </div>
+      </section>
+
+      <!-- 04 — HOW IT WORKS -->
+      <section class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase">04 — HOW IT WORKS</span>
+          <div class="h-[1px] flex-1 bg-white/[0.08]"></div>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          System Workflow &amp; Architecture
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl">
+          Event organizers drop an event pin on the digital campus coordinate grid. Firebase broadcasts changes to all active student clients, populating live activity tags on the map.
+        </p>
+        
+        <!-- Workflow Steps -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
+          
+            <div class="p-5 rounded-xl bg-[#0a0e17] border border-white/[0.06] space-y-2">
+              <span class="text-xs font-mono font-bold text-neonViolet">01</span>
+              <h3 class="text-sm font-bold text-white">Pin Placement</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Organizer selects campus building/room coordinate and adds event info.</p>
+            </div>
+          
+            <div class="p-5 rounded-xl bg-[#0a0e17] border border-white/[0.06] space-y-2">
+              <span class="text-xs font-mono font-bold text-neonViolet">02</span>
+              <h3 class="text-sm font-bold text-white">Realtime Propagation</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Firebase synchronizes pin data with active listener nodes instantly.</p>
+            </div>
+          
+            <div class="p-5 rounded-xl bg-[#0a0e17] border border-white/[0.06] space-y-2">
+              <span class="text-xs font-mono font-bold text-neonViolet">03</span>
+              <h3 class="text-sm font-bold text-white">Exploration</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Students filter activities by interest (Hackathons, Talks, Social) on the interactive map.</p>
+            </div>
+          
+            <div class="p-5 rounded-xl bg-[#0a0e17] border border-white/[0.06] space-y-2">
+              <span class="text-xs font-mono font-bold text-neonViolet">04</span>
+              <h3 class="text-sm font-bold text-white">Engagement</h3>
+              <p class="text-xs text-slate-400 leading-relaxed">Students view venue details, start times, and live attendance indicators.</p>
+            </div>
+          
+        </div>
+
+        <!-- Architecture Flow Diagram -->
+        <div class="mt-6 p-6 rounded-2xl bg-[#090d15] border border-white/[0.06] space-y-4">
+          <span class="text-xs font-mono font-semibold uppercase text-slate-400 block">Data Pipeline &amp; Interaction Flow</span>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] text-center space-y-1.5 relative">
+                <span class="text-xs font-mono text-slate-300 font-bold block">Organizer Client</span>
+                <span class="text-[11px] font-mono text-neonCyan block">↓ Geotagged Pin Submission</span>
+                <span class="text-xs font-mono text-white font-bold block">Firebase Firestore</span>
+              </div>
+            
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] text-center space-y-1.5 relative">
+                <span class="text-xs font-mono text-slate-300 font-bold block">Firebase Realtime Listener</span>
+                <span class="text-[11px] font-mono text-neonCyan block">↓ Instant Sync & Pin Rendering</span>
+                <span class="text-xs font-mono text-white font-bold block">Student Map UI</span>
+              </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 — INTERFACE -->
+      <section class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase">05 — INTERFACE</span>
+          <div class="h-[1px] flex-1 bg-white/[0.08]"></div>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Application Screenshots
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
+          
+            <div class="space-y-3">
+              <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg bg-[#0A0D15]">
+                
+      <div class="w-full h-full min-h-[300px] sm:min-h-[340px] bg-[#0A0D15] rounded-xl p-5 flex flex-col justify-between border border-white/[0.08] relative overflow-hidden font-sans select-none">
+        <div class="flex items-center justify-between pb-3 border-b border-white/[0.06]">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-violet-400 animate-ping"></span>
+            <span class="text-xs font-mono text-white font-semibold">Campus Live Activity Radar</span>
+          </div>
+          <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-violet-500/20 text-violet-300 border border-violet-500/30">14 Live Pins</span>
+        </div>
+
+        <!-- Simulated Vector Campus Map -->
+        <div class="my-4 relative h-40 rounded-lg bg-[#070A11] border border-white/[0.05] overflow-hidden">
+          <!-- Grid Lines -->
+          <div class="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          
+          <!-- Buildings -->
+          <div class="absolute top-4 left-6 w-24 h-14 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-[10px] font-mono text-slate-500">Tech Block</div>
+          <div class="absolute bottom-4 right-8 w-28 h-16 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-[10px] font-mono text-slate-500">Auditorium</div>
+          <div class="absolute top-6 right-16 w-20 h-12 rounded border border-white/10 bg-white/[0.02] flex items-center justify-center text-[10px] font-mono text-slate-500">Library</div>
+
+          <!-- Pulsing Map Pins -->
+          <div class="absolute top-10 left-24 flex items-center gap-1.5 cursor-pointer">
+            <span class="w-3.5 h-3.5 rounded-full bg-neonCyan border-2 border-white shadow-[0_0_12px_#38BDF8] flex items-center justify-center"></span>
+            <span class="px-2 py-0.5 rounded bg-cyberDark/90 text-neonCyan text-[10px] font-mono border border-neonCyan/40 shadow-lg">Hackathon Hub (68)</span>
+          </div>
+
+          <div class="absolute bottom-10 right-20 flex items-center gap-1.5 cursor-pointer">
+            <span class="w-3.5 h-3.5 rounded-full bg-neonViolet border-2 border-white shadow-[0_0_12px_#8B5CF6]"></span>
+            <span class="px-2 py-0.5 rounded bg-cyberDark/90 text-violet-300 text-[10px] font-mono border border-neonViolet/40 shadow-lg">Robotics Meet</span>
+          </div>
+        </div>
+
+        <!-- Active Brief Strip -->
+        <div class="p-3 rounded-lg bg-[#111728] border border-white/[0.07] flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2.5">
+            <span class="text-base">🚀</span>
+            <div>
+              <div class="font-bold text-white">48-Hr Web Sprint · Lab 304</div>
+              <div class="text-[11px] text-slate-400 font-mono">Started 25m ago · Open to all CSE batches</div>
+            </div>
+          </div>
+          <span class="px-2.5 py-1 rounded bg-violet-600/30 text-white font-mono text-[11px] border border-violet-500/40">View Pin ↗</span>
+        </div>
+      </div>
+    
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white font-mono">Geospatial Event Map</h3>
+                <p class="text-xs text-slate-400 mt-0.5 leading-relaxed">Campus map view with categorized activity markers and instant location focus.</p>
+              </div>
+            </div>
+          
+            <div class="space-y-3">
+              <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg bg-[#0A0D15]">
+                
+      <div class="w-full h-full min-h-[300px] sm:min-h-[340px] bg-[#0A0D15] rounded-xl p-5 flex flex-col justify-between border border-white/[0.08] relative overflow-hidden font-sans select-none">
+        <div class="flex items-center justify-between pb-3 border-b border-white/[0.06]">
+          <span class="text-xs font-mono text-neonViolet font-bold uppercase tracking-wider">Activity Brief #CAMPUS-88</span>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300">Happening Now</span>
+        </div>
+
+        <div class="space-y-3 my-2">
+          <h4 class="text-lg font-bold text-white">Web3 & Modern Architecture Jam</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Hands-on build session covering serverless APIs and component performance benchmarks. Join in person or tune in via the live campus socket stream.
+          </p>
+
+          <div class="grid grid-cols-2 gap-2 text-xs font-mono">
+            <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
+              <span class="text-slate-500 block text-[10px]">VENUE</span>
+              <span class="text-white font-semibold">T-Hub Hall 4B</span>
+            </div>
+            <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
+              <span class="text-slate-500 block text-[10px]">ATTENDEES</span>
+              <span class="text-neonCyan font-semibold">54 Confirmed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-white/[0.06] flex items-center justify-between">
+          <span class="text-xs font-mono text-slate-400">Host: Open Source Society</span>
+          <span class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-neonViolet to-neonCyan text-white text-xs font-semibold">RSVP to Activity</span>
+        </div>
+      </div>
+    
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-white font-mono">Activity Brief Modal</h3>
+                <p class="text-xs text-slate-400 mt-0.5 leading-relaxed">Expanded detail panel showing event time, building locator, and host details.</p>
+              </div>
+            </div>
+          
+        </div>
+      </section>
+
+      <!-- 06 — CHALLENGES & LEARNINGS -->
+      <section class="space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase">06 — CHALLENGES &amp; LEARNINGS</span>
+          <div class="h-[1px] flex-1 bg-white/[0.08]"></div>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Engineering Takeaways
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2.5">
+            <h3 class="text-xs font-mono font-semibold uppercase text-red-300/90">What Was Difficult</h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-normal">Managing responsive SVG/Canvas map scaling across mobile screens while maintaining accurate pin positions.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2.5">
+            <h3 class="text-xs font-mono font-semibold uppercase text-cyan-300/90">Technical Decisions</h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-normal">Normalized coordinates relative to a responsive bounding grid rather than hardcoded pixel values.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] space-y-2.5">
+            <h3 class="text-xs font-mono font-semibold uppercase text-emerald-300/90">What I Learned</h3>
+            <p class="text-sm text-slate-300 leading-relaxed font-normal">Gained hands-on experience developing under hackathon time limits, working with NoSQL data schemas, and implementing responsive map interfaces.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 — DEMO & SUMMARY -->
+      <section class="p-8 rounded-2xl glass-panel border border-white/10 space-y-4 text-center max-w-2xl mx-auto">
+        <span class="text-xs font-mono uppercase tracking-widest text-slate-400 block">07 — DEMO &amp; CODEBASE</span>
+        <h3 class="text-xl font-bold text-white">CampusLive</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Built as a hackathon project to make campus activities easier to discover instead of relying on scattered announcements across message boards and social groups.
+        </p>
+        <div class="pt-2 flex flex-wrap justify-center gap-4">
+          
+          
+            <a href="https://github.com/souryajeet10/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-mono font-semibold text-white bg-white/[0.08] hover:bg-white/[0.15] border border-white/10 transition-all">
+              GitHub ↗
+            </a>
+          
+          
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Navigation Footer: Previous / Back / Next -->
+    <div class="mt-20 pt-10 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6 font-mono text-sm">
+      <a href="../appointment-system/" class="inline-flex items-center gap-2 text-slate-400 hover:text-neonCyan transition-colors group">
+        <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span>Previous: Appointment System</span>
+      </a>
+
+      <a href="../../index.html#projects" class="px-5 py-2 rounded-xl bg-white/[0.04] border border-white/[0.08] text-slate-300 hover:text-white hover:border-white/20 transition-all">
+        Back to Projects
+      </a>
+
+      <a href="../krishilink/" class="inline-flex items-center gap-2 text-slate-400 hover:text-neonCyan transition-colors group">
+        <span>Next: KrishiLink</span>
+        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <footer id="site-footer" class="signature-footer">
+  <svg class="footer-waves" viewBox="0 0 1400 500" preserveAspectRatio="none" aria-hidden="true"><path transform="translate(0 0)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 17)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 34)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 51)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 68)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 85)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 102)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/><path transform="translate(0 119)" d="M-100 210 C260 390 420 330 760 190 S1120 90 1500 180"/></svg>
+  <div class="signature-inner">
+    <p class="signature-eyebrow">STUDENT / PROGRAMMER / DEVELOPER / CREATOR</p>
+    <p class="signature-name" aria-label="Souryajeet Singh"><span aria-hidden="true">SOURYAJEET</span><span aria-hidden="true">SINGH<span class="signature-period">.</span></span></p>
+    <div class="signature-bottom"><p>© <span data-footer-year>2026</span> Souryajeet Singh</p>
+      <nav aria-label="Footer links"><a href="https://github.com/souryajeet10/" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/souryajeet10/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:souryajeet2006@gmail.com">Email ↗</a><a href="../../index.html#hero">Back to top ↑</a></nav>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
