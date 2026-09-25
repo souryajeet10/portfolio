@@ -11,6 +11,8 @@
 .case-hero-visual { padding: 32px; border: 1px solid #bca7de24; border-radius: 24px; background: radial-gradient(ellipse at 50% 35%, #b19ac526, transparent 70%), #131018; display: flex; align-items: center; flex-direction: column; gap: 24px; }
 .case-hero-visual img { width: 244px; max-width: 100%; border: 6px solid #28232e; border-radius: 27px; box-shadow: 0 24px 55px #0007; }
 .case-hero-visual > span { font: 9px ui-monospace, monospace; letter-spacing: .15em; color: #baadca; }
+.case-hero-visual.case-cover { padding: 24px; overflow: hidden; background: #21180f; }
+.case-hero-visual.case-cover img { width: auto; max-width: 100%; height: auto; max-height: 420px; border: 0; border-radius: 10px; box-shadow: none; }
 .case-facts { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 25px; border-block: 1px solid #ffffff16; padding: 28px 0; }
 .case-facts dt { font: 10px ui-monospace, monospace; text-transform: uppercase; color: #998ca9; margin-bottom: 10px; }
 .case-facts dd { font-size: 13px; color: #ded3e8; line-height: 1.7; }

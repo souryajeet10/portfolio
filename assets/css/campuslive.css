@@ -1,0 +1,13 @@
+.campus-case .case-cover { background: #111020; }
+.campus-caption { max-width: 660px; margin-top: 20px; color: #a99db7; font-size: 14px; line-height: 1.8; }
+.campus-gallery { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; margin-top: 36px; }
+.campus-gallery figure { min-width: 0; }
+.campus-gallery a { display: block; border: 1px solid #b5a1dc30; border-radius: 12px; overflow: hidden; background: #101018; transition: border-color .2s; }
+.campus-gallery a:hover { border-color: #b5a1dc90; }
+.campus-gallery img { display: block; width: 100%; height: auto; }
+.campus-gallery figcaption { padding: 18px 2px; }
+.campus-gallery strong { display: block; color: #e1d6ee; font-size: 16px; margin-bottom: 7px; }
+.campus-gallery figcaption span { color: #a79bb2; font-size: 13px; line-height: 1.7; }
+.campus-gallery:not(.campus-art-gallery) figure:first-child { grid-column: 1/-1; }
+.campus-art-gallery img { max-height: 620px; object-fit: contain; }
+@media(max-width:600px) { .campus-gallery { grid-template-columns: 1fr; gap: 20px; } }

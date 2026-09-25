@@ -1,4 +1,4 @@
-// Centralized projects data. MessMate details verified against its repository.
+// Project details verified against the linked repositories.
 const projectsData = [
   {
     "id": "messmate",
@@ -9,7 +9,7 @@ const projectsData = [
     "description": "A mobile-first menu platform for United Homes, Karnavati University, with confirmed meals, serving times, and live manager updates.",
     "shortDescription": "Planned menus, confirmed meals, and serving times in one mobile-first app.",
     "fullDescription": "MessMate helps United Homes students check what is actually being served. Managers can update meals and confirm menus, with Firebase synchronizing menu overrides across devices.",
-    "image": "./assets/projects/messmate/today-dark.png",
+    "image": "./assets/projects/messmate/main.png",
     "technologies": [
       "React",
       "Firebase",
@@ -65,74 +65,84 @@ const projectsData = [
     "demo": "https://messmate-uh.vercel.app",
     "demoAvailable": true,
     "detailRoute": "/projects/messmate",
-    "detailHref": "./projects/messmate.html",
+    "detailHref": "./projects/messmate/",
     "accentColor": "violet"
   },
   {
     "id": "campuslive",
     "slug": "campuslive",
     "number": "02",
-    "title": "CampusLive",
-    "eyebrow": "Interactive Discovery Platform",
-    "description": "A campus activity discovery platform that helps students discover what's happening around them through an interactive live campus map.",
-    "shortDescription": "A campus activity discovery platform that helps students discover what's happening around them through an interactive live campus map.",
-    "fullDescription": "A campus activity discovery platform that helps students discover what's happening around them through an interactive live campus map. Built to replace scattered bulletin board notices and chat groups with a centralized map experience.",
-    "image": "/images/projects/campuslive.png",
+    "title": "CampusLive @VITAP",
+    "eyebrow": "Campus Social Platform",
+    "description": "A map-first campus platform built for the VIT-AP Freshers Hackathon 2026, connecting events, communities, announcements, and Lost & Found.",
+    "shortDescription": "Discover activities, join events, and explore your campus in real time.",
+    "fullDescription": "CampusLive connects campus discovery with participation through interactive maps, event creation, clubs, announcements, and location-based Lost & Found reports.",
+    "image": "./assets/projects/campuslive/cover-final.png",
     "technologies": [
       "React",
-      "Firebase",
-      "JavaScript"
+      "Firestore",
+      "React Leaflet",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vite"
     ],
     "technologiesDetailed": [
       {
         "name": "React",
-        "role": "Dynamic Map UI & Filter System"
+        "role": "Component UI and routing"
       },
       {
-        "name": "Firebase",
-        "role": "Realtime Database & Authentication"
+        "name": "Firestore",
+        "role": "Realtime activities, clubs, and participation"
       },
       {
-        "name": "JavaScript",
-        "role": "Interactive Map Geometry & State"
+        "name": "Leaflet / OpenStreetMap",
+        "role": "Maps and location markers"
+      },
+      {
+        "name": "Tailwind CSS",
+        "role": "Responsive styling"
+      },
+      {
+        "name": "Framer Motion",
+        "role": "Interface transitions"
+      },
+      {
+        "name": "Vite / Vercel",
+        "role": "Build tooling and hosting"
       }
     ],
     "features": [
-      "Live campus map",
-      "Activity pins",
-      "Activity discovery",
-      "Event information"
+      "Interactive campus map",
+      "Create and join activities",
+      "Club communities",
+      "Campus announcements",
+      "Lost & Found"
     ],
     "featuresDetailed": [
       {
-        "title": "Live campus map",
-        "desc": "Interactive map visualization pinning real-time workshops, club meetups, and hackathons across campus venues."
+        "title": "Map-first discovery",
+        "desc": "Search activities and filter categories on the campus map."
       },
       {
-        "title": "Activity pins",
-        "desc": "Color-coded geospatial map markers reflecting activity categories, crowd interest, and ongoing timelines."
+        "title": "Participation",
+        "desc": "Join and leave activities through Firestore participant updates."
       },
       {
-        "title": "Activity discovery",
-        "desc": "Filterable feed allowing students to discover happenings by category, academic department, or time."
-      },
-      {
-        "title": "Event information",
-        "desc": "Detailed modal views providing venue directions, agenda outlines, organizer contacts, and RSVP counters."
+        "title": "Community",
+        "desc": "Explore clubs, announcements, and Lost & Found reports."
       }
     ],
-    "overview": "A real-time geospatial discovery platform where students can see what clubs, workshops, or study groups are meeting right now across university grounds.",
-    "problem": "Campus announcements were scattered across multiple unofficial social channels, causing students to miss relevant workshops, tech talks, and cultural events.",
-    "solution": "Created an interactive web map with Firebase Realtime Database integration allowing student organizers to drop activity pins and attendees to discover them instantaneously.",
-    "workflow": "Event organizers drop an event pin on the digital campus coordinate grid. Firebase broadcasts changes to all active student clients, populating live activity tags on the map.",
-    "challenges": "Managing responsive SVG/Canvas map scaling across mobile screens while maintaining accurate pin positions.",
-    "learnings": "Gained hands-on experience developing under hackathon time limits, working with NoSQL data schemas, and implementing responsive map interfaces.",
-    "github": null,
-    "githubPrivate": true,
-    "demo": null,
-    "demoAvailable": false,
+    "overview": "A real-time campus engagement platform for VIT-AP.",
+    "problem": "Campus activities are scattered across chat groups and notice boards.",
+    "solution": "Unify discovery, event participation, and community tools around an interactive campus map.",
+    "workflow": "Choose a location, enter event details, publish to Firestore, and synchronize updates through snapshot listeners.",
+    "github": "https://github.com/souryajeet10/CampusliveVITAP",
+    "githubPrivate": false,
+    "demo": "https://campuslive-vitap.vercel.app",
+    "demoAvailable": true,
     "detailRoute": "/projects/campuslive",
-    "detailHref": "./projects/campuslive.html",
+    "detailHref": "./projects/campuslive/",
     "accentColor": "violet"
   },
   {
@@ -214,9 +224,8 @@ const projectsData = [
     "demo": null,
     "demoAvailable": false,
     "detailRoute": "/projects/krishilink",
-    "detailHref": "./projects/krishilink.html",
+    "detailHref": "./projects/krishilink/",
     "accentColor": "cyan"
   }
 ];
-
 if (typeof module !== "undefined" && module.exports) { module.exports = { projectsData }; }

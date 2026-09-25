@@ -1,32 +1,32 @@
-# Portfolio
+# Souryajeet Singh — Portfolio
 
-Personal portfolio website showcasing my projects, skills, and work as a Computer Science student.
+Static HTML, CSS, and JavaScript portfolio. Tailwind CSS is compiled locally.
 
-## Tech Stack
+## Structure
 
-- HTML
-- CSS
-- JavaScript
-- React
-- Firebase
+- `index.html` — homepage with MessMate and CampusLive featured.
+- `projects/index.html` — all projects.
+- `projects/{messmate,campuslive,krishilink}/index.html` — canonical case studies.
+- `projects.html` and `projects/*.html` — small redirects preserving existing URLs.
+- `assets/css/` — shared styles and Tailwind input/output.
+- `js/` — shared interactions, components, and project data.
+- `assets/images/portraits/` — optimized responsive portraits.
+- `assets/projects/` — current project covers, screenshots, and source notes.
+- `assets/logos/` — technology icons and attribution.
+- `docs/reference/` — retained personal reference document, not used by the site.
 
-## Projects
+## Development
 
-A collection of my web development, hackathon, and personal projects.
+```sh
+npm ci
+npm run build
+npm run preview
+```
 
-
-
-## Shared Assets
-
-- `assets/site.css` — styles the signature footer and shared accessibility behaviour on all pages.
-- `assets/motion.css`, `assets/polish.css`, and `js/motion.js` — enhance the homepage.
-- Portrait WebP files are provided at 480 and 800 pixels. Original photos are retained.
-- The contact form opens an email draft. It does not send mail or store messages.
+Open http://localhost:5173. Rebuild after changing Tailwind utility classes.
+GitHub Pages publishes the repository on pushes to `main`.
+The contact form opens an email draft; it does not send or store messages.
 
 ## Author
 
-**Souryajeet Singh**
-
-- GitHub: [github.com/souryajeet10](https://github.com/souryajeet10)
-- LinkedIn: [linkedin.com/in/souryajeet10](https://www.linkedin.com/in/souryajeet10/)
-- Email: souryajeet2006@gmail.com
+Souryajeet Singh · [GitHub](https://github.com/souryajeet10) · [LinkedIn](https://www.linkedin.com/in/souryajeet10/)

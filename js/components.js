@@ -10,7 +10,7 @@ const PortfolioComponents = {
 
     const homeHref = isHome ? '#hero' : `${basePath}index.html`;
     const skillsHref = `${basePath}index.html#skills`;
-    const projectsHref = isProjects ? (basePath === '../' ? './index.html' : `${basePath}projects.html`) : `${basePath}projects.html`;
+    const projectsHref = isProjects ? (basePath === '../' ? './index.html' : `${basePath}projects/`) : `${basePath}projects/`;
     const experienceHref = `${basePath}index.html#experience`;
     const aboutHref = `${basePath}index.html#about`;
     const contactHref = `${basePath}index.html#contact`;
