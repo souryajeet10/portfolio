@@ -13,7 +13,6 @@ Static HTML, CSS, and JavaScript portfolio. Tailwind CSS is compiled locally.
 - `assets/images/portraits/` — optimized responsive portraits.
 - `assets/projects/` — current project covers, screenshots, and source notes.
 - `assets/logos/` — technology icons and attribution.
-- `docs/reference/` — retained personal reference document, not used by the site.
 
 ## Development
 
