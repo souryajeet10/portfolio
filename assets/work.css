@@ -1,6 +1,6 @@
 .editorial-section { position: relative; padding-inline: clamp(20px, 5vw, 80px); border-top: 1px solid #ffffff0a; }
 #projects.editorial-section { background: transparent; }
-#experience.editorial-section { background: linear-gradient(90deg, #08090fed, #08090fc9); }
+#experience.editorial-section { background: transparent; }
 .editorial-inner { width: 100%; max-width: 1160px; margin-inline: auto; }
 .section-kicker { font: 11px/1.5 ui-monospace, monospace; letter-spacing: .17em; color: #b8a4d6; margin-bottom: 18px; }
 .editorial-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 44px; }

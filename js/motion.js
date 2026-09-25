@@ -127,7 +127,19 @@
   addEventListener('resize', updateProgress);
   updateProgress();
 
-  const targets = [...document.querySelectorAll('#hero .lg\\:col-span-7 > *, #hero .lg\\:col-span-5, section h2, #skills .badge-item, #projects article, #experience .journey-entry, #about .glass-panel, #contact .glass-panel')];
+  const revealSelector = [
+    '#hero .lg\\:col-span-7 > *', '#hero .lg\\:col-span-5',
+    '.watermark-label', 'section h2',
+    '#skills .text-center.max-w-3xl', '#skills h3', '#skills .badge-item',
+    '#projects .editorial-heading', '#projects article', '#projects .work-end',
+    '#experience .journey-intro', '#experience .journey-entry',
+    '#about .order-1 > p', '#about .order-1 > .flex', '#about .glass-panel',
+    '#contact .text-center.max-w-3xl', '#contact .glass-panel',
+    '#site-footer .signature-inner > *'
+  ].join(', ');
+  // Animate each content block once, without stacking parent and child reveals.
+  const targets = [...document.querySelectorAll(revealSelector)]
+    .filter(el => !el.parentElement.closest(revealSelector));
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
