@@ -127,7 +127,7 @@
   addEventListener('resize', updateProgress);
   updateProgress();
 
-  const targets = [...document.querySelectorAll('#hero .lg\\:col-span-7 > *, #hero .lg\\:col-span-5, section h2, #skills .badge-item, #projects article, #experience .glass-panel, #about .glass-panel, #contact .glass-panel')];
+  const targets = [...document.querySelectorAll('#hero .lg\\:col-span-7 > *, #hero .lg\\:col-span-5, section h2, #skills .badge-item, #projects article, #experience .journey-entry, #about .glass-panel, #contact .glass-panel')];
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

@@ -2,8 +2,11 @@
 .ambient-wave { stroke-opacity: .3; }
 .ambient-scene { mask-image: linear-gradient(to bottom, #000d, #000 45%, #000d); }
 main > section[id]:not(#hero) { min-height: auto; padding-top: clamp(80px, 9vw, 130px); padding-bottom: clamp(80px, 9vw, 130px); }
-main > section > [aria-hidden="true"]:has(> span) { top: 24px; }
 main > section > [aria-hidden="true"] > span { font-size: clamp(64px, 12vw, 150px); letter-spacing: .06em; color: #b7a7d60a; filter: none; transform: none; }
+main section .watermark-label { position: relative; inset: auto; transform: none; margin: 0 0 28px; pointer-events: none; user-select: none; }
+main section span.section-watermark { display: block; font-weight: 900; -webkit-text-stroke: 1px currentColor; letter-spacing: .04em; color: #8e7ba9; opacity: 1; filter: none; transform: none; line-height: 1; }
+main section .experience-watermark, main section .projects-watermark { width: 100%; max-width: 1160px; margin-inline: auto; margin-bottom: 48px; }
+main section .experience-watermark > span, main section .projects-watermark > span { font-size: clamp(28px, 7.5vw, 100px); letter-spacing: .015em; }
 #hero h1 { font-size: clamp(38px, 5.7vw, 80px); line-height: 1.06; letter-spacing: -.055em; max-width: 720px; }
 #hero .hero-name { display: block; }
 #hero h1 .hero-period { color: #b59ae9; -webkit-text-fill-color: #b59ae9; }

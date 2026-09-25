@@ -246,6 +246,7 @@
 <script src="./js/motion.js" defer></script>
 <link rel="stylesheet" href="./assets/site.css"/>
 <script defer src="./js/site.js"></script>
+<link rel="stylesheet" href="./assets/work.css"/>
 </head>
 <body class="cyber-grid-bg text-slate-200 antialiased font-sans selection:bg-neonPurple/30 selection:text-neonCyan min-h-screen relative overflow-x-hidden">
 <!-- Ambient Cyber Lighting Blobs -->
@@ -420,8 +421,8 @@
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-violet-600/10 via-cyan-500/10 to-purple-600/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 <div class="absolute top-10 left-1/3 w-64 h-64 bg-neonCyan/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
 <!-- Giant SKILLS text watermark -->
-<div aria-hidden="true" class="absolute inset-x-0 top-12 flex justify-center items-center pointer-events-none select-none -z-0">
-  <span class="text-6xl sm:text-9xl md:text-[12rem] font-black uppercase tracking-widest text-white/[0.03] blur-[1px] -translate-y-4 sm:-translate-y-10">SKILLS</span>
+<div aria-hidden="true" class="watermark-label absolute inset-x-0 top-12 flex justify-center items-center pointer-events-none select-none -z-0">
+  <span class="section-watermark text-6xl sm:text-9xl md:text-[12rem] font-black uppercase tracking-widest text-white/[0.03] blur-[1px] -translate-y-4 sm:-translate-y-10">SKILLS</span>
 </div>
 <div class="max-w-6xl mx-auto relative z-10 reveal-on-scroll revealed">
 <!-- Header Area -->
@@ -437,7 +438,7 @@
 
   <!-- Heading -->
   <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4 sm:mb-5 font-sans">
-    Skills
+    TECHSTACK
   </h2>
 
   <!-- Thin Elegant Gradient Divider with Centered Diamond -->
@@ -542,6 +543,11 @@
       <div class="h-[1px] w-8 sm:w-12 bg-gradient-to-l from-transparent to-cyan-400/40"></div>
     </div>
     <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+      <!-- C -->
+      <div class="badge-item group rounded-full px-6 py-3 bg-[#111622]/80 backdrop-blur-md border border-white/10 hover:border-cyan-500/50 hover:bg-[#161c2d] hover:shadow-[0_0_25px_rgba(56,189,248,0.3)] transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3 cursor-default">
+        <img class="skill-logo" src="./assets/logos/c.svg" alt="" width="28" height="28" loading="lazy" decoding="async"/>
+        <span class="text-sm sm:text-base font-medium text-slate-200 group-hover:text-white transition-colors">C</span>
+      </div>
       <!-- Python -->
       <div class="badge-item group rounded-full px-6 py-3 bg-[#111622]/80 backdrop-blur-md border border-white/10 hover:border-cyan-500/50 hover:bg-[#161c2d] hover:shadow-[0_0_25px_rgba(56,189,248,0.3)] transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3 cursor-default" style="animation-delay: 500ms;">
         <img class="skill-logo" src="./assets/logos/python.svg" alt="" width="28" height="28" loading="lazy" decoding="async"/>
@@ -572,398 +578,49 @@
 
 <!-- BEGIN: FeaturedProjectsSection -->
 <!-- Editorial Projects Showcase -->
-<section class="min-h-screen py-16 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-white/[0.06] relative overflow-hidden bg-[#07090E] flex flex-col justify-center snap-start" data-purpose="featured-projects" id="projects">
-  <!-- Ambient Lighting Elements -->
-  <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
-  <div class="absolute bottom-10 left-0 w-[450px] h-[450px] bg-neonCyan/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
-  
-  <!-- Giant PROJECTS text watermark -->
-  <div aria-hidden="true" class="absolute inset-x-0 top-6 flex justify-center items-start pointer-events-none select-none -z-0">
-    <span class="text-6xl sm:text-9xl md:text-[11rem] font-black uppercase tracking-widest text-white/[0.02] blur-[1px]">PROJECTS</span>
-  </div>
-
-  <div class="max-w-7xl mx-auto relative z-10 reveal-on-scroll">
-    <!-- Section Header (Left-aligned as in reference) -->
-    <div class="max-w-3xl mb-8 sm:mb-16">
-      <!-- Eyebrow: — MY WORK -->
-      <div class="flex items-center gap-2.5 mb-3">
-        <div class="h-[1.5px] w-6 bg-neonViolet"></div>
-        <span class="text-xs sm:text-sm font-mono font-semibold tracking-[0.25em] text-neonViolet uppercase">
-          MY WORK
-        </span>
-      </div>
-
-      <!-- Heading: Projects -->
-      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white font-sans mb-3">
-        Projects
-      </h2>
-
-      <!-- Subtitle -->
-      <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl">
-        A collection of projects I've built while exploring web development, product design, and new technologies.
-      </p>
-    </div>
-
-    <!-- 4 Project Cards Grid (1 col mobile, 2 col tablet, 4 col desktop) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <!-- PROJECT 01: Appointment System -->
-      <article class="group rounded-2xl p-5 sm:p-6 bg-[#0B0F19]/90 border border-white/[0.08] hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-between hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
-        <div>
-          <!-- Large Visual Placeholder / Image -->
-          <a aria-label="Explore Appointment System" aria-label="Explore Appointment System" href="./projects/appointment-system.html" class="block rounded-xl overflow-hidden mb-5 aspect-[16/10] bg-gradient-to-br from-[#121828] via-[#0d1220] to-[#090d16] border border-white/[0.06] relative group/img cursor-pointer transition-all hover:border-neonCyan/30">
-            <div class="project-art art-appointment" aria-hidden="true"><div class="art-orbit"></div><span class="art-monogram">AS</span><span class="art-tag">SCHEDULING, SIMPLIFIED</span></div></a>
-
-          <!-- Title -->
-          <a aria-label="Explore Appointment System" href="./projects/appointment-system.html" class="block group/title">
-            <h3 class="text-xl font-bold text-white mb-2 group-hover/title:text-neonCyan transition-colors">
-              Appointment System
-            </h3>
-          </a>
-
-          <!-- Description -->
-          <p class="text-xs text-slate-400 leading-relaxed mb-4 min-h-[44px]">
-            A full-stack appointment booking platform designed to make scheduling simple for users and administrators.
-          </p>
-
-          <!-- Technology Pills -->
-          <div class="flex flex-wrap gap-1.5 mb-5">
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">React</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Node.js</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">MongoDB</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">WebSockets</span>
-          </div>
-
-          <!-- Features -->
-          <ul class="space-y-2 mb-6 text-xs text-slate-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Appointment booking</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Real-time availability</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Admin dashboard</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>User management</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Card Footer: TWO Action Buttons -->
-        <div class="project-card-footer"><span>Project overview</span><a aria-label="Explore Appointment System" href="./projects/appointment-system.html">Explore project <span aria-hidden="true">↗</span></a></div></article>
-
-      <!-- PROJECT 02: CampusLive -->
-      <article class="group rounded-2xl p-5 sm:p-6 bg-[#0B0F19]/90 border border-white/[0.08] hover:border-violet-500/30 transition-all duration-300 flex flex-col justify-between hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
-        <div>
-          <!-- Large Visual Placeholder / Image -->
-          <a aria-label="Explore CampusLive" aria-label="Explore CampusLive" href="./projects/campuslive.html" class="block rounded-xl overflow-hidden mb-5 aspect-[16/10] bg-gradient-to-br from-[#161224] via-[#100d1c] to-[#090714] border border-white/[0.06] relative group/img cursor-pointer transition-all hover:border-neonViolet/30">
-            <div class="project-art art-campus" aria-hidden="true"><div class="art-orbit"></div><span class="art-monogram">CL</span><span class="art-tag">CAMPUS, CONNECTED</span></div></a>
-
-          <!-- Title -->
-          <a aria-label="Explore CampusLive" href="./projects/campuslive.html" class="block group/title">
-            <h3 class="text-xl font-bold text-white mb-2 group-hover/title:text-purple-300 transition-colors">
-              CampusLive
-            </h3>
-          </a>
-
-          <!-- Description -->
-          <p class="text-xs text-slate-400 leading-relaxed mb-4 min-h-[44px]">
-            A campus activity discovery platform that helps students discover what's happening around them through an interactive live campus map.
-          </p>
-
-          <!-- Technology Pills -->
-          <div class="flex flex-wrap gap-1.5 mb-5">
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">React</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Firebase</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">JavaScript</span>
-          </div>
-
-          <!-- Features -->
-          <ul class="space-y-2 mb-6 text-xs text-slate-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Live campus map</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Activity pins</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Activity discovery</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Event information</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Card Footer: TWO Action Buttons -->
-        <div class="project-card-footer"><span>Project overview</span><a aria-label="Explore CampusLive" href="./projects/campuslive.html">Explore project <span aria-hidden="true">↗</span></a></div></article>
-
-      <!-- PROJECT 03: KrishiLink -->
-      <article class="group rounded-2xl p-5 sm:p-6 bg-[#0B0F19]/90 border border-white/[0.08] hover:border-cyan-500/30 transition-all duration-300 flex flex-col justify-between hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
-        <div>
-          <!-- Large Visual Placeholder / Image -->
-          <a aria-label="Explore KrishiLink" aria-label="Explore KrishiLink" href="./projects/krishilink.html" class="block rounded-xl overflow-hidden mb-5 aspect-[16/10] bg-gradient-to-br from-[#101b24] via-[#0c151c] to-[#070e14] border border-white/[0.06] relative group/img cursor-pointer transition-all hover:border-neonCyan/30">
-            <div class="project-art art-market" aria-hidden="true"><div class="art-orbit"></div><span class="art-monogram">KL</span><span class="art-tag">SMARTER MARKET CONNECTIONS</span></div></a>
-
-          <!-- Title -->
-          <a aria-label="Explore KrishiLink" href="./projects/krishilink.html" class="block group/title">
-            <h3 class="text-xl font-bold text-white mb-2 group-hover/title:text-neonCyan transition-colors">
-              KrishiLink
-            </h3>
-          </a>
-
-          <!-- Description -->
-          <p class="text-xs text-slate-400 leading-relaxed mb-4 min-h-[44px]">
-            An AI-powered decision layer designed to help farmers decide where, when, and to whom to sell their produce.
-          </p>
-
-          <!-- Technology Pills -->
-          <div class="flex flex-wrap gap-1.5 mb-5">
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Flutter</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">REST APIs</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">AI</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">e-NAM</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Agmarknet</span>
-          </div>
-
-          <!-- Features -->
-          <ul class="space-y-2 mb-6 text-xs text-slate-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Market data</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Price analysis</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Buyer discovery</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Multilingual interface</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonCyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Voice-first interaction</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Card Footer: TWO Action Buttons -->
-        <div class="project-card-footer"><span>Project overview</span><a aria-label="Explore KrishiLink" href="./projects/krishilink.html">Explore project <span aria-hidden="true">↗</span></a></div></article>
-
-      <!-- PROJECT 04: Student Dashboard -->
-      <article class="group rounded-2xl p-5 sm:p-6 bg-[#0B0F19]/90 border border-white/[0.08] hover:border-violet-500/30 transition-all duration-300 flex flex-col justify-between hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)]">
-        <div>
-          <!-- Large Visual Placeholder / Image -->
-          <a aria-label="Explore Student Dashboard" aria-label="Explore Student Dashboard" href="./projects/student-dashboard.html" class="block rounded-xl overflow-hidden mb-5 aspect-[16/10] bg-gradient-to-br from-[#181226] via-[#110d1c] to-[#090714] border border-white/[0.06] relative group/img cursor-pointer transition-all hover:border-neonViolet/30">
-            <div class="project-art art-student" aria-hidden="true"><div class="art-orbit"></div><span class="art-monogram">SD</span><span class="art-tag">A LITTLE MORE ORGANIZED</span></div></a>
-
-          <!-- Title -->
-          <a aria-label="Explore Student Dashboard" href="./projects/student-dashboard.html" class="block group/title">
-            <h3 class="text-xl font-bold text-white mb-2 group-hover/title:text-purple-300 transition-colors">
-              Student Dashboard
-            </h3>
-          </a>
-
-          <!-- Description -->
-          <p class="text-xs text-slate-400 leading-relaxed mb-4 min-h-[44px]">
-            A productivity dashboard designed around the everyday workflow of students to manage tasks, deadlines, study goals, and academic progress in one place.
-          </p>
-
-          <!-- Technology Pills -->
-          <div class="flex flex-wrap gap-1.5 mb-5">
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">React</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">JavaScript</span>
-            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/[0.04] text-slate-300 border border-white/[0.08]">Firebase</span>
-          </div>
-
-          <!-- Features -->
-          <ul class="space-y-2 mb-6 text-xs text-slate-300">
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Task management</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Deadline tracking</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Study goals</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg class="w-3.5 h-3.5 text-neonViolet shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <span>Progress overview</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Card Footer: TWO Action Buttons -->
-        <div class="project-card-footer"><span>Project overview</span><a aria-label="Explore Student Dashboard" href="./projects/student-dashboard.html">Explore project <span aria-hidden="true">↗</span></a></div></article>
-
-    </div>
-
-    <!-- Section Ending: Centered View all projects with line wings + Quote underneath -->
-    <div class="mt-16 sm:mt-20">
-      <div class="flex items-center justify-center max-w-2xl mx-auto">
-        <div class="h-[1px] flex-1 bg-gradient-to-r from-transparent via-white/10 to-white/20"></div>
-        <a href="./projects.html" class="px-7 py-2.5 mx-4 rounded-full font-mono text-xs font-semibold text-white bg-white/[0.03] hover:bg-white/[0.08] border border-neonCyan/40 hover:border-neonCyan shadow-[0_0_15px_rgba(56,189,248,0.12)] transition-all flex items-center gap-2">
-          <span>View all projects</span>
-          <span class="text-neonCyan">↗</span>
-        </a>
-        <div class="h-[1px] flex-1 bg-gradient-to-l from-transparent via-white/10 to-white/20"></div>
-      </div>
-
-      <p class="text-center text-slate-400 text-xs sm:text-sm mt-6 font-normal">
-        Every project started with an idea. Building it taught me something I couldn't learn from a tutorial.
-      </p>
-    </div>
-  </div>
-</section>
+<section id="projects" class="editorial-section" aria-labelledby="work-heading">
+<div class="watermark-label projects-watermark" aria-hidden="true"><span class="section-watermark">PROJECTS</span></div>
+<div class="editorial-inner"><div class="editorial-heading"><div><p class="section-kicker">SELECTED WORK</p><h2 id="work-heading">Ideas, built into <em>projects.</em></h2></div><p>Exploring real problems through web applications, useful interfaces, and hands-on experimentation.</p></div>
+<div class="work-collection"><article class="work-card work-featured">
+ <a class="work-visual visual-appointment-system" href="./projects/appointment-system.html" aria-label="Explore Appointment System">
+  <span class="visual-label">Full-stack development</span>
+  <div class="work-diagram" aria-hidden="true"><span class="diagram-symbol">◷</span><strong>Appointment System</strong><div class="diagram-flow"><span>Book an appointment</span><span>Check availability</span><span>Manage schedules</span></div></div>
+  <span class="visual-caption">Project concept <span aria-hidden="true">↗</span></span>
+ </a>
+ <div class="work-content"><p class="work-category">FEATURED PROJECT</p><h3><a href="./projects/appointment-system.html">Appointment System</a></h3><p class="work-headline">Scheduling without the back-and-forth.</p><p class="work-description">A booking platform that connects appointment scheduling, live availability, and an administrator dashboard.</p><ul class="work-stack" aria-label="Technologies"><li>React</li><li>Node.js</li><li>MongoDB</li><li>WebSockets</li></ul><a class="work-link" href="./projects/appointment-system.html">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Appointment System</span></a></div>
+</article><article class="work-card ">
+ <a class="work-visual visual-campuslive" href="./projects/campuslive.html" aria-label="Explore CampusLive">
+  <span class="visual-label">Campus discovery</span>
+  <div class="work-diagram" aria-hidden="true"><span class="diagram-symbol">⌖</span><strong>CampusLive</strong><div class="diagram-flow"><span>Campus map</span><span>Activity pins</span><span>Discover events</span></div></div>
+  <span class="visual-caption">Project concept <span aria-hidden="true">↗</span></span>
+ </a>
+ <div class="work-content"><p class="work-category">CAMPUS DISCOVERY</p><h3><a href="./projects/campuslive.html">CampusLive</a></h3><p class="work-headline">Find what’s happening around you.</p><p class="work-description">An interactive campus map for discovering activities, events, and the places where students come together.</p><ul class="work-stack" aria-label="Technologies"><li>React</li><li>Firebase</li><li>JavaScript</li></ul><a class="work-link" href="./projects/campuslive.html">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: CampusLive</span></a></div>
+</article><article class="work-card ">
+ <a class="work-visual visual-krishilink" href="./projects/krishilink.html" aria-label="Explore KrishiLink">
+  <span class="visual-label">Agriculture & AI</span>
+  <div class="work-diagram" aria-hidden="true"><span class="diagram-symbol">↗</span><strong>KrishiLink</strong><div class="diagram-flow"><span>Market data</span><span>Price analysis</span><span>Buyer discovery</span></div></div>
+  <span class="visual-caption">Project concept <span aria-hidden="true">↗</span></span>
+ </a>
+ <div class="work-content"><p class="work-category">AGRICULTURE & AI</p><h3><a href="./projects/krishilink.html">KrishiLink</a></h3><p class="work-headline">Better information. Better market decisions.</p><p class="work-description">A decision-support concept helping farmers explore where, when, and to whom to sell their produce.</p><ul class="work-stack" aria-label="Technologies"><li>Flutter</li><li>REST APIs</li><li>AI</li></ul><a class="work-link" href="./projects/krishilink.html">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: KrishiLink</span></a></div>
+</article><article class="work-card ">
+ <a class="work-visual visual-student-dashboard" href="./projects/student-dashboard.html" aria-label="Explore Student Dashboard">
+  <span class="visual-label">Student productivity</span>
+  <div class="work-diagram" aria-hidden="true"><span class="diagram-symbol">☷</span><strong>Student Dashboard</strong><div class="diagram-flow"><span>Plan tasks</span><span>Track deadlines</span><span>Review progress</span></div></div>
+  <span class="visual-caption">Project concept <span aria-hidden="true">↗</span></span>
+ </a>
+ <div class="work-content"><p class="work-category">STUDENT PRODUCTIVITY</p><h3><a href="./projects/student-dashboard.html">Student Dashboard</a></h3><p class="work-headline">A clearer view of the student day.</p><p class="work-description">Tasks, deadlines, and study goals brought together in one focused workspace.</p><ul class="work-stack" aria-label="Technologies"><li>React</li><li>JavaScript</li><li>Firebase</li></ul><a class="work-link" href="./projects/student-dashboard.html">Explore project <span aria-hidden="true">↗</span><span class="sr-only">: Student Dashboard</span></a></div>
+</article></div><div class="work-end"><p>Explore the thinking and technologies behind each build.</p><a href="./projects.html">All projects <span aria-hidden="true">↗</span></a></div></div></section>
 <!-- END: FeaturedProjectsSection -->
 
 <!-- BEGIN: ExperienceSection -->
-<section class="min-h-screen py-16 sm:py-28 px-4 sm:px-6 lg:px-8 border-t border-white/[0.06] relative overflow-hidden bg-[#07090E] flex flex-col justify-center snap-start" data-purpose="experience-section" id="experience">
-  <!-- Ambient subtle background glow -->
-  <div class="absolute top-1/3 -left-32 w-96 h-96 bg-neonViolet/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
-  <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-neonCyan/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
-  
-  <!-- Giant EXPERIENCE watermark -->
-  <div aria-hidden="true" class="absolute inset-x-0 top-8 flex justify-center items-center pointer-events-none select-none -z-0">
-    <span class="text-6xl sm:text-9xl md:text-[11rem] font-black uppercase tracking-widest text-white/[0.02] blur-[1px]">EXPERIENCE</span>
-  </div>
-
-  <div class="max-w-6xl mx-auto relative z-10 reveal-on-scroll">
-    <!-- Section Header (Left-aligned with generous negative space) -->
-    <div class="max-w-2xl mb-8 sm:mb-16">
-      <div class="flex items-center gap-3 mb-3">
-        <div class="h-[1px] w-8 bg-gradient-to-r from-transparent to-neonCyan/60"></div>
-        <span class="text-xs sm:text-sm font-mono font-semibold tracking-[0.25em] text-neonCyan uppercase">
-          EDUCATION &amp; WORK
-        </span>
-      </div>
-
-      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white font-sans mb-3">
-        Experience
-      </h2>
-
-      <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
-        Learning, building, and gaining experience through projects.
-      </p>
-
-      <div class="w-16 h-1 bg-gradient-to-r from-neonViolet to-neonCyan rounded-full mt-4"></div>
-    </div>
-
-    <!-- MAIN ROW: Two-Column Layout (Education on Left, Experience on Right) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-6 sm:mb-8">
-      <!-- LEFT COLUMN — EDUCATION -->
-      <div class="relative group p-5 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-neonViolet/40 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-        <!-- Subtle top accent highlight -->
-        <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-neonViolet/60 via-purple-500/20 to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
-        
-        <div>
-          <!-- Date / Year & Top-Right Icon -->
-          <div class="flex items-start justify-between gap-4 mb-4">
-            <span class="text-xs font-mono font-semibold text-purple-300 tracking-wider uppercase px-2.5 py-1 rounded-md bg-neonViolet/10 border border-neonViolet/20">
-              2026 — PRESENT
-            </span>
-            <!-- Education Icon -->
-            <div class="p-2.5 rounded-xl bg-neonViolet/10 text-purple-300 border border-neonViolet/20 group-hover:scale-105 group-hover:text-white transition-all duration-300">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-              </svg>
-            </div>
-          </div>
-
-          <!-- Title & Subtitle -->
-          <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-purple-200 transition-colors">
-            B.Tech in Computer Science &amp; Engineering
-          </h3>
-          <div class="text-sm font-medium text-neonCyan mt-1 mb-4 font-mono">
-            Computer Science Undergraduate
-          </div>
-
-          <!-- Description -->
-          <p class="text-slate-300/90 text-sm sm:text-base leading-relaxed">
-            Building a foundation in computer science while exploring web development, software engineering, and AI.
-          </p>
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN — EXPERIENCE -->
-      <div class="relative group p-5 sm:p-8 rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-neonCyan/40 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-        <!-- Subtle top accent highlight -->
-        <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-neonCyan/60 via-cyan-500/20 to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
-
-        <div>
-          <!-- Date / Year & Top-Right Icon -->
-          <div class="flex items-start justify-between gap-4 mb-4">
-            <span class="text-xs font-mono font-semibold text-neonCyan tracking-wider uppercase px-2.5 py-1 rounded-md bg-neonCyan/10 border border-neonCyan/20">
-              2025 — PRESENT
-            </span>
-            <!-- Developer/Code Icon -->
-            <div class="p-2.5 rounded-xl bg-neonCyan/10 text-neonCyan border border-neonCyan/20 group-hover:scale-105 group-hover:text-white transition-all duration-300">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-            </div>
-          </div>
-
-          <!-- Title & Subtitle -->
-          <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight group-hover:text-cyan-200 transition-colors">
-            Web Developer
-          </h3>
-          <div class="text-sm font-medium text-purple-300 mt-1 mb-4 font-mono">
-            Independent Projects
-          </div>
-
-          <!-- Description -->
-          <p class="text-slate-300/90 text-sm sm:text-base leading-relaxed">
-            Learning web development by building real applications with JavaScript, React, backend technologies, databases, and APIs.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Hackathons & Projects Highlight -->
-    <div class="relative group p-6 sm:p-7 rounded-2xl bg-white/[0.015] border border-white/[0.06] hover:border-neonViolet/30 transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-4">
-      <div class="space-y-1.5 max-w-3xl">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-mono font-semibold text-purple-300 tracking-wider uppercase px-2.5 py-1 rounded-md bg-neonViolet/10 border border-neonViolet/20">
-            2025 — PRESENT
-          </span>
-          <span class="text-xs font-mono text-slate-400">Independent / Team Projects</span>
-        </div>
-        <h4 class="text-lg sm:text-xl font-bold text-white tracking-tight group-hover:text-purple-200 transition-colors pt-1">
-          Hackathons &amp; Projects
-        </h4>
-        <p class="text-slate-400 text-sm leading-relaxed">
-          Turning ideas and problem statements into working prototypes while learning through hands-on development.
-        </p>
-      </div>
-
-      <div class="p-3 rounded-xl bg-white/[0.03] text-purple-300 border border-white/[0.08] shrink-0 self-start md:self-center group-hover:scale-105 group-hover:text-white transition-all">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="experience" class="editorial-section" aria-labelledby="experience-heading">
+<div class="watermark-label experience-watermark" aria-hidden="true"><span class="section-watermark">EXPERIENCE</span></div>
+<div class="editorial-inner journey-layout"><div class="journey-intro"><p class="section-kicker">EDUCATION &amp; EXPERIENCE</p><h2 id="experience-heading">Learning by<br/><em>building.</em></h2><p>A growing foundation in computer science, shaped by independent projects and collaborative work.</p><a class="journey-link" href="#projects">See what I’m building <span aria-hidden="true">↗</span></a></div>
+<ol class="journey-timeline">
+<li class="journey-entry"><div class="journey-date"><time datetime="2026">2026</time> — Present <span>Education</span></div><div class="journey-detail"><h3>B.Tech in Computer Science &amp; Engineering</h3><p class="journey-role">Computer Science Undergraduate</p><p>Developing a foundation in computer science while exploring software engineering, web development, and AI.</p><ul class="journey-tags"><li>Computer science</li><li>Software engineering</li></ul></div></li>
+<li class="journey-entry"><div class="journey-date"><time datetime="2026">2026</time> — Present <span>Independent work</span></div><div class="journey-detail"><h3>Web Developer</h3><p class="journey-role">Independent projects</p><p>Building applications with React, JavaScript, backend services, databases, and APIs—from the interface to the data behind it.</p><a href="./projects/appointment-system.html">Explore Appointment System <span aria-hidden="true">↗</span></a></div></li>
+<li class="journey-entry"><div class="journey-date"><time datetime="2026">2026</time> — Present <span>Collaboration</span></div><div class="journey-detail"><h3>Hackathons &amp; Prototypes</h3><p class="journey-role">Independent &amp; team projects</p><p>Turning problem statements into working prototypes, testing ideas, and learning through hands-on collaboration.</p><ul class="journey-tags"><li>Prototyping</li><li>Problem solving</li><li>Teamwork</li></ul></div></li>
+</ol></div></section>
 
 <!-- BEGIN: AboutSection -->
 <section class="min-h-screen py-16 sm:py-20 lg:py-[100px] px-4 sm:px-6 lg:px-8 border-t border-white/[0.06] relative overflow-hidden bg-[#07090E] flex flex-col justify-center snap-start" data-purpose="about-section" id="about">
@@ -974,8 +631,8 @@
       <!-- Text Column (Desktop Left Top, Mobile Order 1) -->
       <div class="order-1 lg:col-start-1 lg:row-start-1 space-y-5 relative">
         <!-- Giant ABOUT text watermark -->
-        <div aria-hidden="true" class="pointer-events-none select-none -translate-y-8 sm:-translate-y-12 -mb-6 sm:-mb-8">
-          <span class="text-6xl sm:text-8xl md:text-9xl font-black uppercase tracking-widest text-white/[0.04] blur-[0.5px] leading-none block">ABOUT</span>
+        <div aria-hidden="true" class="watermark-label pointer-events-none select-none -translate-y-8 sm:-translate-y-12 -mb-6 sm:-mb-8">
+          <span class="section-watermark text-6xl sm:text-8xl md:text-9xl font-black uppercase tracking-widest text-white/[0.04] blur-[0.5px] leading-none block">ABOUT</span>
         </div>
         <div class="flex items-center gap-3 mb-2">
           <div class="h-[1px] w-8 bg-gradient-to-r from-transparent to-neonCyan/60"></div>
@@ -1052,8 +709,8 @@
 <!-- BEGIN: ContactSection -->
 <section class="min-h-screen py-16 sm:py-24 px-4 sm:px-6 lg:px-8 border-t border-white/[0.06] relative overflow-hidden bg-[#07090E] flex flex-col justify-center snap-start" data-purpose="contact-section" id="contact">
 <!-- Giant CONTACT text watermark -->
-<div aria-hidden="true" class="absolute inset-x-0 top-12 flex justify-center items-center pointer-events-none select-none z-0">
-  <span class="text-6xl sm:text-9xl md:text-[12rem] font-black uppercase tracking-widest text-white/[0.03] blur-[1px] -translate-y-4 sm:-translate-y-10">CONTACT</span>
+<div aria-hidden="true" class="watermark-label absolute inset-x-0 top-12 flex justify-center items-center pointer-events-none select-none z-0">
+  <span class="section-watermark text-6xl sm:text-9xl md:text-[12rem] font-black uppercase tracking-widest text-white/[0.03] blur-[1px] -translate-y-4 sm:-translate-y-10">CONTACT</span>
 </div>
 <div class="max-w-6xl mx-auto reveal-on-scroll revealed relative z-10">
 <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">

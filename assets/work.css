@@ -1,0 +1,58 @@
+.editorial-section { position: relative; padding-inline: clamp(20px, 5vw, 80px); border-top: 1px solid #ffffff0a; }
+#projects.editorial-section { background: transparent; }
+#experience.editorial-section { background: linear-gradient(90deg, #08090fed, #08090fc9); }
+.editorial-inner { width: 100%; max-width: 1160px; margin-inline: auto; }
+.section-kicker { font: 11px/1.5 ui-monospace, monospace; letter-spacing: .17em; color: #b8a4d6; margin-bottom: 18px; }
+.editorial-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 44px; }
+.editorial-section h2 { font-size: clamp(32px, 4vw, 52px); line-height: 1.13; letter-spacing: -.045em; font-weight: 600; color: #f1edf8; }
+.editorial-section h2 em { font-style: normal; color: #b6a0d6; }
+.editorial-heading > p { max-width: 330px; color: #a7a0b4; font-size: 14px; line-height: 1.8; }
+.work-collection { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+#projects .work-card { overflow: hidden; border-radius: 18px; background: #101018; border: 1px solid #c2addb20; }
+#projects .work-card:hover { border-color: #c2addb55; translate: 0 -3px; }
+.work-featured { grid-column: 1/-1; display: grid; grid-template-columns: 1.12fr 1fr; }
+.work-visual { display: flex; flex-direction: column; position: relative; min-height: 230px; padding: 22px; border-bottom: 1px solid #ffffff08; background: radial-gradient(ellipse at 50% 50%,#a78bfa15,transparent 80%),#13121d; overflow: hidden; }
+.work-featured .work-visual { min-height: 365px; border-bottom: none; border-right: 1px solid #ffffff08; }
+.visual-label, .visual-caption { display: flex; justify-content: space-between; font: 9px/1.5 ui-monospace,monospace; letter-spacing: .08em; color: #a89abf; }
+.visual-caption { margin-top: auto; }
+.work-diagram { margin: auto 0; padding: 20px 0; text-align: center; }
+.diagram-symbol { display: block; margin: 0 auto 12px; width: 44px; height: 44px; border-radius: 13px; border: 1px solid #bda9e647; color: #cab5eb; font: 30px/42px system-ui; background: #b59ae912; }
+.work-diagram strong { color: #dad1e8; font-size: 17px; font-weight: 500; }
+.diagram-flow { display: flex; justify-content: center; gap: 5px; margin-top: 18px; }
+.diagram-flow span { border-top: 1px solid #bda9e64d; padding: 9px 4px 0; color: #a8a0b7; font-size: 9px; flex: 1; max-width: 135px; }
+.work-featured .diagram-symbol { width: 64px; height: 64px; font-size: 40px; line-height: 62px; }
+.work-featured .work-diagram strong { font-size: 28px; }
+.work-featured .diagram-flow { margin-top: 26px; gap: 14px; }
+.work-featured .diagram-flow span { font-size: 11px; }
+.visual-krishilink { background: radial-gradient(ellipse at center,#90b9a314,transparent 80%),#111819; }
+.visual-student-dashboard { background: radial-gradient(ellipse at center,#96aee019,transparent 80%),#11141e; }
+.work-content { display: flex; flex-direction: column; padding: 26px; }
+.work-featured .work-content { padding: clamp(26px,4vw,48px); }
+.work-category { color: #aaa0b9; font: 9px/1.6 ui-monospace,monospace; letter-spacing: .1em; margin-bottom: 12px; }
+.work-card h3 { font-size: 24px; color: #eeeaf5; font-weight: 600; line-height: 1.2; }
+.work-featured h3 { font-size: 32px; }
+.work-headline { color: #c7bdd5; font-size: 13px; margin: 12px 0; line-height: 1.6; }
+.work-description { color: #a59eaf; font-size: 13px; line-height: 1.8; margin-bottom: 22px; }
+.work-stack, .journey-tags { display: flex; flex-wrap: wrap; gap: 7px; padding: 0; list-style: none; }
+.work-stack { margin-top: auto; }
+.work-stack li, .journey-tags li { font-size: 10px; color: #bbb0cb; background: #b5a1dc08; border: 1px solid #b5a1dc1c; padding: 4px 8px; border-radius: 5px; }
+.work-link { display: flex; justify-content: space-between; margin-top: 24px; padding-top: 17px; border-top: 1px solid #ffffff0d; font-size: 12px; color: #d0bce9; }
+.work-link:hover, .journey-detail a:hover, .journey-link:hover { color: white; }
+.work-end { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-top: 32px; font-size: 12px; color: #9991a6; }
+.work-end a { color: #d0bce9; white-space: nowrap; padding: 12px 0; }
+.journey-layout { display: grid; grid-template-columns: .8fr 1.4fr; gap: 80px; align-items: start; }
+.journey-intro > p:not(.section-kicker) { color: #a7a0b4; font-size: 14px; line-height: 1.9; margin-top: 24px; }
+.journey-link { display: inline-block; margin-top: 28px; padding-block: 8px; font-size: 12px; color: #c9b3e6; }
+.journey-timeline { list-style: none; padding: 0 0 0 28px; border-left: 1px solid #b5a1dc30; }
+.journey-entry { position: relative; padding: 0 0 34px; margin-bottom: 30px; border-bottom: 1px solid #ffffff0c; }
+.journey-entry::before { content: ''; position: absolute; left: -33px; top: 5px; width: 9px; height: 9px; background: #b5a1dc; border: 2px solid #17121e; border-radius: 50%; box-shadow: 0 0 0 4px #08090f; }
+.journey-entry:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.journey-date { display: flex; gap: 5px; align-items: center; flex-wrap: wrap; font: 11px/1.7 ui-monospace,monospace; color: #b7a3d4; margin-bottom: 14px; }
+.journey-date > span { margin-left: auto; color: #97909f; font-size: 10px; }
+.journey-detail h3 { color: #eeebf3; font-size: 21px; font-weight: 500; line-height: 1.4; letter-spacing: -.025em; }
+.journey-role { color: #b6a8c7; font-size: 12px; margin-top: 5px; }
+.journey-detail > p:not(.journey-role) { color: #a59eaf; font-size: 13px; line-height: 1.85; margin-top: 16px; }
+.journey-tags, .journey-detail a { margin-top: 18px; }
+.journey-detail a { display: inline-block; color: #ccb7e4; font-size: 12px; padding-block: 4px; }
+@media(max-width:900px) { .work-collection { grid-template-columns: repeat(2,minmax(0,1fr)); } .work-card:last-child { grid-column: 1/-1; display: grid; grid-template-columns: 1fr 1fr; } .journey-layout { grid-template-columns: 1fr; gap: 40px; } .journey-intro { max-width: 520px; } }
+@media(max-width:600px) { .editorial-heading { display: block; margin-bottom: 30px; } .editorial-heading > p { margin-top: 20px; } .work-collection { grid-template-columns: 1fr; } .work-featured, .work-card:last-child { display: block; } .work-featured .work-visual { min-height: 250px; } .work-end { align-items: flex-start; } .work-end p { max-width: 210px; line-height: 1.7; } .journey-date > span { margin-left: 8px; } .journey-detail h3 { font-size: 20px; } }
