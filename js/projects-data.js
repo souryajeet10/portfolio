@@ -150,82 +150,36 @@ const projectsData = [
     "slug": "krishilink",
     "number": "03",
     "title": "KrishiLink",
-    "eyebrow": "Agricultural Intelligence Layer",
-    "description": "An AI-powered decision layer designed to help farmers decide where, when, and to whom to sell their produce.",
-    "shortDescription": "An AI-powered decision layer designed to help farmers decide where, when, and to whom to sell their produce.",
-    "fullDescription": "An AI-powered decision layer designed to help farmers decide where, when, and to whom to sell their produce. Evaluates regional mandi prices, transit expenses, and buyer networks to maximize take-home income.",
-    "image": "/images/projects/krishilink.png",
+    "eyebrow": "Agricultural Market Platform",
+    "description": "A farmer-focused web app for mandi-price comparison, produce discovery, and voice-assisted selling.",
+    "shortDescription": "Market information and a guided selling workflow in one place.",
+    "fullDescription": "My work on KrishiLink during Smart India Hackathon 2026, PS 26132. A responsive web MVP with market rates, produce listings, offers, and multilingual UI.",
+    "image": "./assets/projects/krishilink/cover.png",
     "technologies": [
-      "Flutter",
-      "REST APIs",
-      "AI",
-      "e-NAM",
-      "Agmarknet"
-    ],
-    "technologiesDetailed": [
-      {
-        "name": "Flutter",
-        "role": "Cross-Platform Mobile Interface"
-      },
-      {
-        "name": "REST APIs",
-        "role": "Data Ingestion & Mandi Aggregation"
-      },
-      {
-        "name": "AI",
-        "role": "Price Trend Analytics & Decision Layer"
-      },
-      {
-        "name": "e-NAM",
-        "role": "National Agriculture Market Data Integration"
-      },
-      {
-        "name": "Agmarknet",
-        "role": "Commodity Spot Price Feeds"
-      }
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Redis"
     ],
     "features": [
-      "Market data",
-      "Price analysis",
-      "Buyer discovery",
-      "Multilingual interface",
-      "Voice-first interaction"
+      "Mandi-price comparison",
+      "Produce marketplace",
+      "Guided selling",
+      "Voice-input integration",
+      "Multilingual interface"
     ],
-    "featuresDetailed": [
-      {
-        "title": "Market data",
-        "desc": "Aggregated live commodity rates from government mandis via e-NAM and Agmarknet public feeds."
-      },
-      {
-        "title": "Price analysis",
-        "desc": "Net-income calculation factoring in distance, haulage logistics, and mandi commission fees."
-      },
-      {
-        "title": "Buyer discovery",
-        "desc": "Curated directory of verified regional buyers, collection hubs, and institutional purchasers."
-      },
-      {
-        "title": "Multilingual interface",
-        "desc": "Localized interfaces designed to overcome linguistic barriers in regional agricultural belts."
-      },
-      {
-        "title": "Voice-first interaction",
-        "desc": "Audio query input enabling farmers to request crop prices effortlessly without complex typing."
-      }
-    ],
-    "overview": "A decision layer for agricultural commerce that calculates true net realization for crops after subtracting logistics and market levies.",
-    "problem": "Farmers frequently travel to distant markets quoting marginally higher prices, only to find transit expenses and spoilage erase their profit margins.",
-    "solution": "Designed an accessible mobile interface powered by REST endpoints aggregating Agmarknet/e-NAM data, paired with a net realization decision algorithm and voice queries.",
-    "workflow": "The farmer speaks or selects crop type and quantity. The system pulls current prices from nearby mandis, computes haulage cost per kilometer, and recommends the destination maximizing net take-home revenue.",
-    "challenges": "Dealing with disparate data schemas from public agricultural registries and designing an interface accessible for non-technical users.",
-    "learnings": "Learned the crucial importance of user-centric empathy in software design, building tech that solves real economic challenges.",
-    "github": null,
-    "githubPrivate": true,
-    "demo": null,
-    "demoAvailable": false,
-    "detailRoute": "/projects/krishilink",
+    "overview": "A web prototype connecting agricultural market information and produce workflows.",
+    "problem": "Prices, buyers, and selling tools are spread across disconnected services.",
+    "solution": "A single web interface for discovering prices and produce and preparing listings.",
+    "workflow": "Compare mandi rates, explore produce, and prepare a listing with typed or voice-assisted fields.",
+    "github": "https://github.com/souryajeet10/KrishiLink",
+    "githubPrivate": false,
+    "demo": "https://krishilink-production.up.railway.app/app.html",
+    "demoAvailable": true,
+    "detailRoute": "/projects/krishilink/",
     "detailHref": "./projects/krishilink/",
-    "accentColor": "cyan"
+    "accentColor": "green"
   }
 ];
 if (typeof module !== "undefined" && module.exports) { module.exports = { projectsData }; }
