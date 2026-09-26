@@ -65,7 +65,7 @@ const projectsData = [
     "demo": "https://messmate-uh.vercel.app",
     "demoAvailable": true,
     "detailRoute": "/projects/messmate",
-    "detailHref": "./projects/messmate/",
+    "detailHref": "./projects/messmate/index.html",
     "accentColor": "violet"
   },
   {
@@ -142,7 +142,7 @@ const projectsData = [
     "demo": "https://campuslive-vitap.vercel.app",
     "demoAvailable": true,
     "detailRoute": "/projects/campuslive",
-    "detailHref": "./projects/campuslive/",
+    "detailHref": "./projects/campuslive/index.html",
     "accentColor": "violet"
   },
   {
@@ -178,7 +178,7 @@ const projectsData = [
     "demo": "https://krishilink-production.up.railway.app/app.html",
     "demoAvailable": true,
     "detailRoute": "/projects/krishilink/",
-    "detailHref": "./projects/krishilink/",
+    "detailHref": "./projects/krishilink/index.html",
     "accentColor": "green"
   }
 ];

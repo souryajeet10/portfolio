@@ -1,11 +1,11 @@
 /* Editorial spacing and restrained depth. */
 .ambient-wave { stroke-opacity: .3; }
 .ambient-scene { mask-image: linear-gradient(to bottom, #000d, #000 45%, #000d); }
-main > section[id]:not(#hero) { min-height: auto; padding-top: clamp(80px, 9vw, 130px); padding-bottom: clamp(80px, 9vw, 130px); }
+main > section[id]:not(#hero) { min-height: auto; padding-top: clamp(28px, 4vw, 56px); padding-bottom: clamp(56px, 6vw, 88px); }
 main > section > [aria-hidden="true"] > span { font-size: clamp(64px, 12vw, 150px); letter-spacing: .06em; color: #b7a7d60a; filter: none; transform: none; }
 main section .watermark-label { position: relative; inset: auto; transform: none; margin: 0 0 28px; pointer-events: none; user-select: none; }
 main section span.section-watermark { display: block; font-weight: 900; -webkit-text-stroke: 1px currentColor; letter-spacing: .04em; color: #8e7ba9; opacity: 1; filter: none; transform: none; line-height: 1; }
-main section .experience-watermark, main section .projects-watermark { width: 100%; max-width: 1160px; margin-inline: auto; margin-bottom: 48px; }
+main section .experience-watermark, main section .projects-watermark { width: 100%; max-width: 1160px; margin-inline: auto; margin-bottom: 24px; }
 main section .experience-watermark > span, main section .projects-watermark > span { font-size: clamp(28px, 7.5vw, 100px); letter-spacing: .015em; }
 #hero h1 { font-size: clamp(38px, 5.7vw, 80px); line-height: 1.06; letter-spacing: -.055em; max-width: 720px; }
 #hero .hero-name { display: block; }
@@ -41,7 +41,8 @@ main section .experience-watermark > span, main section .projects-watermark > sp
 .project-card-footer > span { color: #8f899e; }
 .project-card-footer a { color: #d0bee9; font-weight: 600; padding: 8px 0; }
 #contact { background: radial-gradient(ellipse at 50% 40%, #aa8be309, transparent 70%); }
-#contact > [aria-hidden="true"] { display: none; }
+#contact > .contact-watermark { display: block; width: 100%; max-width: 1080px; margin: 0 auto 24px; text-align: center; }
+#contact .contact-watermark > span { font-size: clamp(40px, 7.5vw, 100px); letter-spacing: .015em; }
 #contact > .max-w-6xl { width: 100%; max-width: 1080px; }
 #contact h2 { font-size: clamp(30px, 4vw, 50px); line-height: 1.15; font-weight: 600; letter-spacing: -.04em; text-wrap: balance; }
 #contact h2 em { color: #baa4dc; font-style: normal; }
@@ -58,3 +59,6 @@ main section .experience-watermark > span, main section .projects-watermark > sp
 @media (min-width: 1024px) { #projects .grid { grid-template-columns: repeat(2, minmax(0,1fr)); } #projects article > div > a:first-child { aspect-ratio: 2.3; } }
 @media (max-width: 639px) { .portrait-switch { max-width: 310px; margin-inline: auto; } #hero h1 { font-size: 44px; } .project-card-footer { flex-wrap: wrap; } }
 @media (prefers-reduced-motion: reduce) { .portrait-images img, .art-orbit, .art-monogram, .portrait-switch { transition: none; } }
+
+/* Align the about copy with the section start rather than the tall portrait. */
+#about > div > .grid { align-items: start; }
