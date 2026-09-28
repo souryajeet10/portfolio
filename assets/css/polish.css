@@ -62,3 +62,14 @@ main section .experience-watermark > span, main section .projects-watermark > sp
 
 /* Align the about copy with the section start rather than the tall portrait. */
 #about > div > .grid { align-items: start; }
+
+/* A single, direct invitation to email. */
+#contact.contact-minimal { text-align: center; }
+.contact-invite { padding: clamp(20px, 4vw, 52px) 0; }
+#contact .connect-link { display: inline-flex; align-items: center; gap: clamp(16px, 3vw, 36px); padding: 12px 0; color: #eee7f7; font-size: clamp(40px, 7vw, 88px); font-weight: 600; letter-spacing: -.055em; line-height: 1.15; text-decoration: none; }
+#contact .connect-link span { color: #b9a0d8; transition: transform .25s ease; }
+#contact .connect-link:hover { color: #cbb6e6; }
+#contact .connect-link:hover span { transform: translate(5px, -5px); }
+#contact .connect-link:focus-visible { outline: 2px solid #b9a0d8; outline-offset: 8px; border-radius: 8px; }
+.contact-invite > p { margin-top: 18px; color: #aaa0b8; font-size: clamp(13px, 1.5vw, 16px); overflow-wrap: anywhere; }
+@media(prefers-reduced-motion:reduce) { #contact .connect-link span { transition: none; } }

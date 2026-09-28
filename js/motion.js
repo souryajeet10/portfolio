@@ -20,18 +20,6 @@
       portrait.disabled = true;
     });
   }
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', event => {
-      event.preventDefault();
-      if (!contactForm.reportValidity()) return;
-      const value = id => contactForm.querySelector(`#${id}`).value.trim();
-      const body = `${value('message')}\n\nFrom: ${value('name')}\nReply to: ${value('email')}`;
-      const draft = `mailto:souryajeet2006@gmail.com?subject=${encodeURIComponent(value('subject'))}&body=${encodeURIComponent(body)}`;
-      document.getElementById('contact-status').textContent = 'Your email app will open with a draft. If it does not, email souryajeet2006@gmail.com directly. Your message is still here.';
-      window.location.href = draft;
-    });
-  }
   // A decorative companion to the native pointer; never intercepts interactions.
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
   const cursor = document.createElement('div');

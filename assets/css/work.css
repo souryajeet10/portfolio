@@ -111,3 +111,54 @@
 .campus-cover { display: flex; justify-content: center; align-items: center; padding: 0; background: #0d101c; }
 .campus-cover img { display: block; width: 100%; height: auto; object-fit: contain; }
 @media (min-width:601px) and (max-width:800px) { .work-featured { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } .work-featured .work-content { padding: 24px; } }
+
+/* Homepage horizontal project gallery. */
+.project-gallery-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 20px; }
+.project-gallery-toolbar > p { color: #a99abb; font: 10px/1.5 ui-monospace, monospace; letter-spacing: .15em; }
+.project-gallery-controls { display: flex; align-items: center; gap: 10px; }
+.project-gallery-controls span { color: #b6a6ca; font: 12px ui-monospace, monospace; margin-right: 12px; }
+.project-gallery-controls button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid #b5a1dc55; background: #17131f; color: #e1d4f1; font-size: 22px; transition: background .2s; }
+.project-gallery-controls button:hover:not(:disabled) { background: #33263f; }
+.project-gallery-controls button:disabled { opacity: .3; cursor: default; }
+#projects .project-gallery { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #8e7ba9 #17131f; padding: 4px 0 20px; }
+#projects .project-gallery > .work-card { flex: 0 0 92%; min-width: 0; display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.4fr); scroll-snap-align: start; scroll-snap-stop: always; }
+#projects .project-gallery > .work-card:hover { translate: none; }
+#projects .project-gallery .work-content { padding: clamp(24px, 3vw, 40px); }
+#projects .project-gallery :is(.messmate-cover, .campus-cover) { min-width: 0; }
+#projects .project-gallery :is(.messmate-cover, .campus-cover) img { width: 100%; height: auto; max-height: 520px; object-fit: contain; }
+@media(max-width:700px) {
+  #projects .project-gallery { gap: 16px; }
+  #projects .project-gallery > .work-card { flex-basis: 92%; display: flex; flex-direction: column; }
+  #projects .project-gallery :is(.messmate-cover, .campus-cover) img { height: 300px; width: 100%; object-fit: contain; }
+  #projects .project-gallery .work-content { flex: 1; padding: 22px; }
+  #projects .project-gallery h3 { font-size: 26px; }
+  .project-gallery-controls span { margin-right: 2px; }
+  .project-gallery-toolbar > p { font-size: 9px; letter-spacing: .08em; }
+}
+/* Page scrolling walks through every project before the next section. */
+#projects .project-gallery { scrollbar-width: none; padding-bottom: 0; }
+#projects .project-gallery::-webkit-scrollbar { display: none; }
+.project-scroll-runway { position: relative; }
+.project-scroll-stage { width: 100%; }
+.project-scroll-runway.is-pinned .project-scroll-stage { position: sticky; top: 24px; }
+#projects .is-pinned .project-gallery { scroll-snap-type: none; overflow-x: hidden; }
+#projects .is-pinned .work-card { flex-basis: 100%; }
+#projects .is-pinned .project-gallery :is(.messmate-cover, .campus-cover) img { max-height: min(520px, calc(100vh - 130px)); }
+/* Small screens and reduced motion keep every project in normal reading order. */
+#projects .project-scroll-runway:not(.is-pinned) .project-gallery { display: grid; grid-template-columns: 1fr; overflow: visible; }
+.project-scroll-runway:not(.is-pinned) .project-gallery-controls { display: none; }
+
+/* Scroll-drawn experience timeline. */
+.journey-traced { position: relative; min-width: 0; }
+.journey-traced .journey-timeline { position: relative; border-left: 0; padding-left: 64px; }
+.journey-traced .journey-entry::before { display: none; }
+.journey-wave { position: absolute; left: 0; top: 0; width: 48px; height: 100%; overflow: visible; pointer-events: none; }
+.journey-wave path { fill: none; stroke-linecap: round; }
+.journey-wave-track { stroke: #b5a1dc26; stroke-width: 2; }
+.journey-wave-trace { stroke: #bca6df; stroke-width: 2.5; filter: drop-shadow(0 0 5px #ad87d650); }
+.journey-wave-node { fill: #14111c; stroke: #675776; stroke-width: 2; transition: fill .25s, stroke .25s; }
+.journey-wave-node.is-reached { fill: #c9b4e6; stroke: #e4d5f5; }
+.journey-wave-tip { fill: #f0e5ff; filter: drop-shadow(0 0 5px #c1a2ec); }
+.journey-traced .journey-entry.is-reached .journey-date { color: #d2bcec; }
+@media(max-width:600px) { .journey-traced .journey-timeline { padding-left: 52px; } .journey-wave { width: 38px; } }
+@media(prefers-reduced-motion:reduce) { .journey-wave-node { transition: none; } .journey-wave-tip { display: none; } }
