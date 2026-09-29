@@ -24,7 +24,7 @@
       style?.visibility !== 'hidden' && Number(style?.opacity) > .5;
     if (!canFly) {
       loader.classList.add('is-leaving');
-      setTimeout(cleanup, 300);
+      setTimeout(cleanup, 320);
       return;
     }
     const name = loader.querySelector('.loader-name');
@@ -49,12 +49,12 @@
     const animation = flight.animate([
       {transform: `translate(${source.left - rect.left}px, ${source.top - rect.top}px) scale(${source.width / rect.width}, ${source.height / rect.height})`},
       {transform: 'translate(0, 0) scale(1)'}
-    ], {duration: 300, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'both'});
+    ], {duration: 750, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'both'});
     animation.finished.then(cleanup, cleanup);
   };
-  setTimeout(dismiss, 200);
+  setTimeout(dismiss, 1200);
   // Restore the real wordmark if the viewport changes during the handoff.
   addEventListener('resize', () => { if (flight) cleanup(); });
   addEventListener('pageshow', event => { if (event.persisted) cleanup(); });
-  setTimeout(cleanup, 500);
+  setTimeout(cleanup, 2500);
 })();
